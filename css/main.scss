@@ -1,0 +1,823 @@
+/* ===================== Variaveis ===================== */
+
+$font-color-standart: #111;
+$font-standart: 'Montserrat',
+sans-serif;
+$font-size: 16px;
+$letter-spacing: (0.8px);
+$line-height: 20px;
+$flex: flex;
+$around: space-around;
+$between: space-between;
+$dark-ish-white: #eeeeee;
+$white: #ffffff;
+$grey: #767676;
+$black: #111111;
+$thanos: #58006d;
+$position: absolute;
+
+/* ===================== Mixins ===================== */
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin button {
+    border: none;
+    outline: none;
+}
+
+/* ===================== Responsividade ===================== */
+
+@media(max-width: 1785px) and (min-width: 1024px) {
+    body {
+        width: 1333px;
+    }
+
+    .slider--content {
+        width: 7%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 47%;
+        right: 84% !important;
+    }
+
+    .nex,
+    .prev {
+        position: absolute;
+        bottom: 26% !important;
+        height: 40px;
+        width: 25px;
+    }
+
+    .next {
+        left: 105% !important;
+        top: 69% !important;
+    }
+
+    .prev {
+        right: 0% !important;
+        top: 69% !important;
+    }
+
+    .menu {
+        width: 94%;
+    }
+
+    .menu-container {
+        width: 35% !important;
+    }
+
+    .product-list {
+        width: 17%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 192px;
+        margin-top: 5%;
+        margin-left: 6%;
+    }
+
+    .div-product {
+        width: 68% !important;
+        text-align: end;
+        margin-bottom: 5%;
+    }
+
+    .product-list--title {
+        font-size: 27px !important;
+    }
+
+    .product--list,
+    .product-list--item {
+        font-size: 14px !important;
+    }
+
+    .product-nav {
+        width: 78% !important;
+    }
+
+    .filter {
+        margin-left: 7% !important;
+        width: 16% !important;
+    }
+
+    .main--results {
+        margin-left: 8px;
+    }
+
+    .items {
+        width: 95% !important;
+    }
+
+    .items--card {
+        width: 26% !important;
+    }
+
+    .btn--card {
+        width: 83% !important;
+    }
+}
+
+/* ===================== Início do css ===================== */
+
+body {
+    font-family: $font-standart;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+}
+
+/* ===================== Início do header ===================== */
+
+.header-itens {
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    z-index: 1;
+}
+
+.menu-container {
+    display: $flex;
+    justify-content: $between;
+    width: 30%;
+}
+
+.menu {
+    display: $flex;
+    justify-content: $around;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .menu-submenu--item {
+        margin-top: 20px;
+        font-family: $font-standart;
+    }
+
+    a {
+        color: $font-color-standart
+    }
+}
+
+
+.search-btn,
+.location-btn,
+.account-icon,
+.bag-icon {
+    border: none;
+    background-color: $white;
+    @include button;
+}
+
+.icons {
+    width: 10%;
+    display: $flex;
+    justify-content: $around;
+    align-items: center;
+}
+
+.search-btn,
+.icons {
+    padding-top: 10px;
+}
+
+.logo {
+    width: 112px;
+    padding-top: 10px;
+}
+
+.icon-search {
+    font-size: 25px;
+}
+
+.icon-user,
+.icon-placeholder,
+.icon-shopping-bag {
+    font-size: 20px;
+}
+
+.icon-control {
+    font-size: 17px;
+    padding-right: 5px;
+}
+
+.line--item {
+    height: 20px;
+    border: 1px solid;
+    margin: 0 10px;
+}
+
+/* ===================== Início do breadcrumb =====================  */
+
+.div-breadcrumb {
+    display: $flex;
+    justify-content: $around;
+    width: 19%;
+    margin-bottom: 25px;
+}
+
+.breadcrumb {
+    display: $flex;
+    justify-content: $between;
+    width: 50%;
+    font-size: 12px;
+
+    a {
+        color: $grey;
+    }
+}
+
+.breadcrumb--line,
+.breadcrumb--item {
+    padding-right: 3px;
+    font-family: $font-standart;
+    font-size: $font-size - 4px;
+}
+
+.breadcrumb--item :not(#polos) {
+    text-decoration: underline;
+}
+
+/* ===================== Início do box polo ===================== */
+
+.product-list--title {
+    color: $font-color-standart;
+    font-family: $font-standart;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: $letter-spacing *2;
+    line-height: 39px;
+}
+
+.product--list {
+    color: $font-color-standart;
+    font-family: $font-standart;
+    font-size: $font-size;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+.product-list--item {
+    color: $font-color-standart;
+    font-family: $font-standart;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+.product-list {
+    width: 26%;
+    display: $flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 192px;
+    margin-top: 5%;
+}
+
+.div-product {
+    width: 68%;
+    text-align: end;
+    margin-bottom: 5%;
+}
+
+.product-nav {
+    display: $flex;
+    width: 97%;
+    justify-content: space-evenly;
+
+    >ul>li {
+        margin-bottom: 8%;
+    }
+}
+
+.filter {
+    height: 210px;
+    width: 17%;
+    display: $flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.filter-btn {
+    height: 35px;
+    width: 250px;
+    border-radius: 30px;
+    border: 1px solid $thanos;
+    outline: none;
+    color: $thanos;
+    font-family: $font-standart;
+    font-size: 14px;
+    letter-spacing: 0.93px;
+    line-height: 17px;
+
+    img {
+        vertical-align: bottom;
+    }
+}
+
+/* ===================== Início do slick ===================== */
+
+.carousel {
+    transform: translate3d(-184px, 0px, 0px);
+}
+
+.carousel-img {
+    width: 1114px;
+}
+
+.slick-list,
+.draggable {
+    width: 58%;
+    float: right;
+    height: 400px;
+}
+
+.img {
+    width: 100%;
+    height: 400px;
+    outline: none !important;
+}
+
+.slick-track {
+    opacity: 1;
+    width: 5570px;
+    transform: translate3d(-1114px, 0px, 0px);
+}
+
+.slick-dots {
+    display: $flex !important;
+    top: 360px !important;
+    left: 67% !important;
+    width: 18% !important;
+
+    li {
+        button::before {
+            font-family: 'slick';
+            font-size: 6px;
+            line-height: $line-height;
+            position: $position;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: none !important;
+            text-align: center;
+            opacity: .25;
+            color: black;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}
+
+.slick-active {
+
+    #slick-slide-control00,
+    #slick-slide-control01 {
+        color: transparent;
+        border-radius: 100%;
+        border: none;
+        margin-right: 5px;
+        height: 12px;
+        width: 1px;
+        border: 1px solid $dark-ish-white;
+        background: $dark-ish-white;
+    }
+}
+
+#slick-slide-control00,
+#slick-slide-control01 {
+    color: transparent;
+    border-radius: 100%;
+    border: none;
+    margin-right: 5px;
+    height: 12px;
+    width: 1px;
+    border: 1px solid #7a7c7f;
+    background: #7a7c7f;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 4% !important;
+}
+
+.next,
+.prev {
+    position: $position;
+    bottom: 57%;
+    height: 40px;
+    width: 25px;
+}
+
+.prev {
+    right: 15%;
+}
+
+.next {
+    right: 11%;
+}
+
+.slider--container {
+    height: 360px;
+    width: 58%;
+    position: $position;
+    left: 621px;
+    z-index: 1;
+    bottom: 24%;
+    background: linear-gradient(179.42deg, #000 -55%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider--content {
+    width: 7%;
+    display: $flex;
+    flex-direction: column;
+    position: $position;
+    top: 47%;
+    right: 75%;
+
+    p {
+        color: $dark-ish-white;
+        font-family: $font-standart;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: 24px;
+    }
+
+    h5 {
+        color: $dark-ish-white;
+        font-family: $font-standart;
+        font-size: 14px;
+        letter-spacing: $letter-spacing;
+        line-height: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        @include button;
+        padding: 0;
+        margin-right: 32px;
+        margin-top: 15px;
+        height: 35px;
+        width: 225px;
+        border-radius: 30px;
+        background-color: $dark-ish-white;
+        font-family: $font-standart;
+        color: $thanos;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: $letter-spacing;
+        line-height: 15px;
+    }
+}
+
+.sec-slider--container {
+    position: $position;
+    left: 42%;
+    bottom: 21%;
+    height: 267px;
+    width: 6%;
+    z-index: 2;
+
+    .sec-slider--content {
+        position: $position;
+        top: 20%;
+        width: 80%;
+    }
+
+    p {
+        color: $dark-ish-white;
+        font-family: $font-standart;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-right: 25px;
+    }
+
+    h5 {
+        color: $dark-ish-white;
+        font-family: $font-standart;
+        font-size: 12px;
+        letter-spacing: $letter-spacing;
+        line-height: 15px;
+        margin-bottom: 20px;
+        padding-right: 60px;
+    }
+
+    button {
+        @include button;
+        margin-top: 27px;
+        background: none;
+        padding: 0;
+        height: 35px;
+        width: 225px;
+        border-radius: 30px;
+        background-color: $dark-ish-white;
+        font-family: $font-standart;
+        color: $thanos;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: $letter-spacing;
+        line-height: 15px;
+    }
+}
+
+/* ===================== Início do main ===================== */
+
+.items {
+    display: $flex;
+    justify-content: $between;
+}
+
+.main-block {
+    width: 87%;
+    margin-left: 85px;
+    margin-right: 86px;
+    margin-top: 25px;
+}
+
+.main--results {
+    color: $black;
+    font-family: $font-standart;
+    font-size: 12px;
+    letter-spacing: $letter-spacing;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+
+.items--card {
+    height: 500px;
+    width: 312px;
+
+    p {
+        color: $black;
+        font-family: $font-standart;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+
+    .old--price {
+        color: $grey;
+        font-family: $font-standart;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 15px;
+        text-decoration: line-through
+    }
+
+    .new--price {
+        color: $thanos;
+        font-family: $font-standart;
+        font-size: $font-size;
+        font-weight: 700;
+        line-height: $line-height;
+    }
+}
+
+.discount {
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+.card--img {
+    position: relative;
+
+    .card {
+        position: $position;
+        overflow: hidden;
+        transition: opacity 175ms linear;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        opacity: 0;
+    }
+}
+
+.btn--card {
+    @include button;
+    background: $white;
+    padding-left: 0px;
+    margin-top: 15px;
+    position: $position;
+    overflow: hidden;
+    opacity: 0;
+    height: 35px;
+    width: 312px;
+    border-radius: 30px;
+    border: 1px solid $thanos;
+    color: $thanos;
+    font-family: $font-standart;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+.card--img:hover {
+    .btn--card {
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 175ms linear;
+    }
+}
+
+.btn--card:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 175ms linear;
+    background: $thanos;
+    color: $white;
+}
+
+.main--pagination {
+    height: 39px;
+    width: 94%;
+    display: $flex;
+    justify-content: center;
+    margin-top: 25px;
+    align-items: center;
+
+    ul {
+        display: $flex;
+        justify-content: $between;
+        width: 359px;
+
+        li {
+            height: 27px;
+            width: 30px;
+            background-color: $thanos;
+            border-radius: 14px;
+            padding-top: 2px;
+            text-align: center;
+
+            a {
+                color: #EEE;
+                font-family: $font-standart;
+                font-size: 18px;
+                vertical-align: sub;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            color: $font-color-standart;
+            font-family: $font-standart;
+            font-size: 20px;
+            align-self: center;
+        }
+    }
+}
+
+.icon-left-arow,
+.icon-righ-arow {
+    font-size: 30px;
+}
+
+/* ===================== Inicio do Footer ===================== */
+
+.footer {
+    display: $flex;
+    margin-top: 5%;
+    height: 422px;
+    width: 85%;
+    margin-bottom: 10%;
+    /* align-items: baseline; */
+    margin-left: 5%;
+    flex-direction: column
+}
+
+.footer--content {
+    width: 58%;
+}
+
+.promo {
+    color: $font-color-standart;
+    font-family: $font-standart;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+.newsletter--form {
+    height: 45px;
+    width: 510px;
+    border-radius: 30px;
+    background-color: #FFF;
+    display: $flex;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.email {
+    height: 45px;
+    width: 510px;
+    border-radius: 30px;
+    background-color: #FFF;
+    border: none;
+    color: $grey;
+    font-family: $font-standart;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.btn {
+    height: 45px;
+    width: 151px;
+    border-radius: 30px;
+    background-color: $thanos;
+    border: 1px solid $thanos;
+    color: #EEE;
+    font-family: $font-standart;
+    font-size: $font-size;
+    outline: none;
+}
+
+.social-media--icons {
+    height: 26px;
+    width: 189px;
+    display: $flex;
+    justify-content: $between;
+    color: $thanos;
+    font-size: 25px;
+}
+
+.nav--content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end
+}
+
+.footer--nav {
+    display: $flex;
+    justify-content: $between;
+    width: 51%;
+
+    h5 {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: $font-size;
+        font-weight: 700;
+    }
+
+    a {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 12px;
+    }
+}
+
+.help {
+    @include flex;
+    height: 250px;
+    width: 192px;
+}
+
+.shippment {
+    height: 280px;
+    width: 315px;
+    @include flex;
+
+    .shippment-options {
+        height: 112px;
+        width: 192px;
+        @include flex;
+    }
+}
+
+.payment {
+    height: 113px;
+    display: $flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.text {
+    color: #767676;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 17px;
+    margin-top: 10px;
+}
+
+// 1440 a tela fica full, hover no botão do slider, efeito slider, gradient div de hover da vitrine
