@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="css/main.scss">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
 
 </head>
 
-<body>
+<body class="containerr">
     <!-------------------------- Header da página -------------------------->
     <header class="header-block">
         <section class="header-itens">
@@ -121,65 +121,67 @@
             </nav>
         </div>
         <!-------------- --Slick -------------- -->
-        <div class="container">
-
-
-            <div class="carousel">
-                <div class="carousel-img">
-                    <div>
-                        <img class="img" src="assets/Dropped Image.png" alt="modelo">
-                    </div>
-                    <div class="slider--container">
+        <div class="carousel-block">
+            <div class="container-carousel">
+                <div class="carousel">
+                    <div class="carousel-img">
+                        <div>
+                            <img class="img" src="assets/Dropped Image.png" alt="modelo">
+                        </div>
                         <!-------------- -- Conteúdo do primeiro slider-------------- -->
-                        <div class="slider--content">
-                            <p>TRXxLEWIS CHEGOU!</p>
-                            <h5>A terceira coleção comemorativa traz o essencial do street-style.</h5>
-                            <button class="slider--btn">compre a coleção</button>
+                        <div class="slider-first--container">
+
+                            <div class="slider--content">
+                                <p>TRXxLEWIS CHEGOU!</p>
+                                <h5>A terceira coleção comemorativa traz o essencial do street-style.</h5>
+                                <button class="slider--btn">compre a coleção</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-img">
-                    <div>
-                        <img class="img" src="assets/Dropped Image 2.png" alt="natureza">
-                    </div>
-                    <!-------------- -- Conteúdo do segundo slider -------------- -->
-                    <div class="sec-slider--container">
-                        <div class="sec-slider--content">
-                            <p>o novo clássico</p>
-                            <h5>Pessas essenciais para todos os estilos.</h5>
-                            <button class="sec-slider--btn">compre aqui</button>
+                    <div class="carousel-img">
+                        <div>
+                            <img class="img" src="assets/Dropped Image 2.png" alt="natureza">
+                        </div>
+                        <!-------------- -- Conteúdo do segundo slider -------------- -->
+                        <div class="sec-slider--container">
+                            <div class="sec-slider--content">
+                                <p>o novo clássico</p>
+                                <h5>Pessas essenciais para todos os estilos.</h5>
+                                <button class="sec-slider--btn">compre aqui</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <div>
+                    <!-------------- -- Setas do carrossel -------------- -->
+                    <img class="prev" src="assets/icon-left-arow.png" alt="seta">
+                </div>
+                <div>
+                    <img class="next" src="assets/icon-righ-arow.png" alt="seta">
+                </div>
             </div>
-            <div>
-                <!-------------- -- Setas do carrossel -------------- -->
-                <img class="prev" src="assets/icon-left-arow.png" alt="seta">
+            <!-------------- -- Box dos produtos -------------- -->
+            <div class="product-list">
+                <div class="div-product"><a href="#" class="product-list--title">Polo Masculina</a></div>
+                <nav class="product-nav">
+                    <ul>
+                        <li><a href="#" class="product--list">Polos</a></li>
+                        <li><a href="#" class="product-list--item">Polos Classic Fit</a></li>
+                        <li><a href="#" class="product-list--item">Polos Slim Fit</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="product-list--item">Manga Longa</a></li>
+                        <li><a href="#" class="product-list--item">Paris Fit</a></li>
+                        <li><a href="#" class="product-list--item">Manga Curta</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div>
-                <img class="next" src="assets/icon-righ-arow.png" alt="seta">
+            <div class="filter">
+                <button class="filter-btn"><i class="icon-control"></i>Filtros e separadores</button>
             </div>
         </div>
-        <!-------------- -- Box dos produtos -------------- -->
-        <div class="product-list">
-            <div class="div-product"><a href="#" class="product-list--title">Polo Masculina</a></div>
-            <nav class="product-nav">
-                <ul>
-                    <li><a href="#" class="product--list">Polos</a></li>
-                    <li><a href="#" class="product-list--item">Polos Classic Fit</a></li>
-                    <li><a href="#" class="product-list--item">Polos Slim Fit</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#" class="product-list--item">Manga Longa</a></li>
-                    <li><a href="#" class="product-list--item">Paris Fit</a></li>
-                    <li><a href="#" class="product-list--item">Manga Curta</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="filter">
-            <button class="filter-btn"><i class="icon-control"></i>Filtros e separadores</button> </div>
     </section>
     <!--------------------------Conteúdo principal -------------------------->
     <main class="main-block">
@@ -272,16 +274,16 @@
             <div class="newsletter--block">
                 <h6 class="promo">Receba Novidade e Promoções</h6>
                 <form class="newsletter--form">
-                    <input class="email" type="text" onfocus="this.value=''" name="email" value="email@example.com">
-                    <input class="btn" type="reset" value="Cadastrar">
+                    <input class="email" type="text" onfocus="this.value=''" name="email" value="exemplo@exemplo.com">
+                    <button class="btn" id="subscribe">Cadastrar</button>
                 </form>
             </div>
             <div class="social-media--icons">
-                <i class="icon-facebook"></i>
-                <i class="icon-instagram"></i>
-                <i class="icon-twitter"></i>
-                <i class="icon-youtube"></i>
-                <i class="icon-linkedin"></i>
+                <a href="#"><i class="icon-facebook"></i></a>
+                <a href="#"><img class="icon-instagram" src="assets/icon-instagram.png"></a>
+                <a href="#"><i class="icon-twitter"></i></a>
+                <a href="#"><img class="icon-youtube" src="assets/icon-youtube.png"></a>
+                <a href="#"><img class="icon-linkedin" src="assets/icon-linkedin.png"></a>
             </div>
         </div>
 

@@ -1,6 +1,10 @@
 $("a").click(function (event) {
     event.preventDefault();
+    $("#subscribe").click(function (event) {
+        event.preventDefault();
+    })
 });
+
 
 $('.carousel').slick({
     dots: true,
@@ -11,6 +15,8 @@ $('.carousel').slick({
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
+    cssEase: 'linear',
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
 });
