@@ -51,7 +51,8 @@
 
   .product-list {
     margin-top: 9% !important;
-    width: 30% !important; }
+    width: 30% !important;
+    display: none !important; }
 
   .product-nav {
     width: 80% !important; }
@@ -77,6 +78,77 @@
   .footer {
     width: 110% !important;
     margin-left: 18px !important; } }
+@media (max-width: 1439px) and (min-width: 1024px) {
+  body {
+    width: 1333px; }
+
+  .slider--content {
+    width: 7%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 47%; }
+
+  .nex,
+  .prev {
+    position: absolute;
+    bottom: 26% !important;
+    height: 40px;
+    width: 25px; }
+
+  .next {
+    left: 80% !important;
+    top: 58% !important; }
+
+  .prev {
+    right: 23% !important;
+    top: 58% !important; }
+
+  .menu {
+    width: 94%; }
+
+  .menu-container {
+    width: 35% !important; }
+
+  .product-list {
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 192px;
+    margin-left: 6%;
+    margin-top: 8% !important; }
+
+  .div-product {
+    width: 68% !important;
+    text-align: end;
+    margin-bottom: 5%; }
+
+  .product-list--title {
+    font-size: 27px !important; }
+
+  .product--list,
+  .product-list--item {
+    font-size: 14px !important; }
+
+  .product-nav {
+    width: 78% !important; }
+
+  .filter {
+    margin-left: 7% !important;
+    width: 16% !important; }
+
+  .main--results {
+    margin-left: 8px; }
+
+  .items {
+    width: 95%; }
+
+  .items--card {
+    width: 26% !important; }
+
+  .btn--card {
+    width: 83% !important; } }
 /* ===================== In├¡cio do css ===================== */
 body {
   font-family: "Montserrat", sans-serif; }
@@ -116,7 +188,12 @@ ul {
   margin-bottom: 25px; }
   .menu .menu-submenu--item {
     margin-top: 20px;
-    font-family: "Montserrat", sans-serif; }
+    font-family: "Montserrat", sans-serif;
+    color: #111;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+    width: 155%; }
   .menu a {
     color: #111; }
 
@@ -165,7 +242,7 @@ ul {
   position: absolute;
   display: flex;
   justify-content: space-around;
-  width: 19%;
+  width: 21%;
   margin-bottom: 25px; }
 
 .breadcrumb {
@@ -180,7 +257,7 @@ ul {
 .breadcrumb--item {
   padding-right: 3px;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px; }
+  font-size: 14px; }
 
 .breadcrumb--item :not(#polos) {
   text-decoration: underline; }
@@ -197,7 +274,7 @@ ul {
 .product--list {
   color: #111;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 20px; }
@@ -246,7 +323,8 @@ ul {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   letter-spacing: 0.93px;
-  line-height: 17px; }
+  line-height: 17px;
+  background: #FFF; }
   .filter-btn img {
     vertical-align: bottom; }
 
@@ -332,6 +410,15 @@ ul {
 .next {
   right: 11%; }
 
+.slider-second-container {
+  height: 399px;
+  width: 58%;
+  position: absolute;
+  left: 621px;
+  z-index: 1;
+  bottom: 0%;
+  background: linear-gradient(to right, #000 39%, rgba(255, 255, 255, 0) 85%); }
+
 .slider--content {
   width: 100%;
   height: 100%;
@@ -389,6 +476,12 @@ ul {
     left: 4%; }
 
 .sec-slider--container {
+  position: absolute;
+  left: 42%;
+  bottom: 21%;
+  height: 267px;
+  width: 6%;
+  z-index: 2;
   background: linear-gradient(to right, #000 -5%, rgba(255, 255, 255, 0) 145%);
   height: 415px;
   width: 100%;
@@ -397,7 +490,7 @@ ul {
   top: 0%; }
   .sec-slider--container .sec-slider--content {
     position: absolute;
-    top: 22%;
+    top: 23%;
     left: 4%; }
   .sec-slider--container p {
     color: #EEE;
@@ -434,7 +527,7 @@ ul {
     letter-spacing: 0.8px;
     line-height: 15px;
     text-transform: uppercase;
-    margin-top: 13px; }
+    margin-top: 19px; }
 
 /* ===================== In├¡cio do main ===================== */
 .items {
@@ -686,5 +779,120 @@ ul {
   font-style: italic;
   line-height: 17px;
   margin-top: 10px; }
+
+.submenu {
+  overflow: hidden;
+  transition: opacity 175ms linear;
+  cursor: pointer;
+  position: absolute;
+  top: 82%;
+  background: white;
+  display: flex;
+  width: 100%;
+  height: 455px;
+  justify-content: space-around;
+  left: 0%; }
+  .submenu .submenu-content {
+    width: 84%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px; }
+    .submenu .submenu-content .category {
+      height: 17px;
+      color: #111;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: bolder;
+      line-height: 17px;
+      width: 22%; }
+    .submenu .submenu-content .products {
+      color: #767676;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: initial;
+      letter-spacing: 0.8px;
+      line-height: 20px;
+      margin-top: 20px; }
+
+.products--clothes {
+  display: flex;
+  flex-direction: column;
+  height: 329px;
+  justify-content: space-between;
+  margin-top: 10px; }
+
+.products--sneakers {
+  display: flex;
+  flex-direction: column;
+  height: 53px;
+  justify-content: space-between;
+  margin-top: 10px; }
+
+.products--accessories {
+  display: flex;
+  flex-direction: column;
+  height: 155px;
+  justify-content: space-between;
+  margin-top: 10px; }
+
+.products--category {
+  height: 225px;
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: end; }
+  .products--category li {
+    margin: 0 5px; }
+
+.classic,
+.slim,
+.summer,
+.zero {
+  box-sizing: border-box;
+  height: 35px;
+  width: 126px;
+  border-radius: 30px;
+  background-color: #FFF;
+  border: 1px solid #767676;
+  padding-top: 7px; }
+
+.socks {
+  box-sizing: border-box;
+  height: 35px;
+  width: 58px;
+  border-radius: 30px;
+  background-color: #FFF;
+  border: 1px solid #767676;
+  padding-top: 7px; }
+
+.surf {
+  box-sizing: border-box;
+  height: 35px;
+  width: 113px;
+  border-radius: 30px;
+  background-color: #FFF;
+  border: 1px solid #767676;
+  padding-top: 7px; }
+
+.mini {
+  box-sizing: border-box;
+  height: 35px;
+  width: 74px;
+  border-radius: 30px;
+  background-color: #FFF;
+  border: 1px solid #767676;
+  padding-top: 7px; }
+
+.submenu-content,
+.submenu {
+  display: none; }
+
+.menu-submenu--item:hover .submenu {
+  display: inline-flex; }
 
 /*# sourceMappingURL=main.css.map */
