@@ -20,11 +20,4 @@ $('.carousel').slick({
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
 });
-
-
-$('.menu-submenu--item').mouseenter(function () {
-    $('.containerr').css({ 'background': "#76767676" });
-    $('.menu-submenu--item').mouseleave(function () {
-        $('.containerr').css({ 'background': "#FFF" })
-    });
-})
+//  transition nos btn
