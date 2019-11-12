@@ -19,5 +19,6 @@ $('.carousel').slick({
     cssEase: 'linear',
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
+    adaptiveHeight: true
+
 });
-//  transition nos btn
