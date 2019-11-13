@@ -1,3 +1,5 @@
+// Prevent Default dos links
+
 $("a").click(function (event) {
     event.preventDefault();
     $("#subscribe").click(function (event) {
@@ -5,6 +7,7 @@ $("a").click(function (event) {
     })
 });
 
+// Slick Js
 
 $('.carousel').slick({
     dots: true,
@@ -19,6 +22,21 @@ $('.carousel').slick({
     cssEase: 'linear',
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
-    adaptiveHeight: true
-
 });
+
+// Modal de pesquisa
+
+var modal = document.getElementsByClassName("search__results");
+var btn = document.getElementsByClassName("search__btn");
+var span = document.getElementsByClassName("icon-close")[0];
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+span.onclick = function () {
+    modal.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

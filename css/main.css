@@ -6,30 +6,30 @@
   .containerr {
     width: 100%; }
 
-  .header-itens {
+  .header--block {
     width: 88% !important; }
 
-  .menu {
+  .header__menu {
     width: 100% !important;
     justify-content: space-between !important;
     padding-left: 18px !important; }
-    .menu .icons {
+    .header__menu .icons {
       padding-right: 20px; }
 
   .div-breadcrumb {
     top: 13% !important; }
 
-  .menu-container {
+  .menu__container {
     width: 63% !important; }
 
-  .product-container {
+  .product__container {
     display: flex;
     /* width: 100%; */
     height: 500px !important;
     justify-content: space-around;
     position: relative; }
 
-  .product-list {
+  .product__list {
     margin-top: -7% !important;
     width: 24% !important;
     position: absolute !important;
@@ -37,22 +37,22 @@
     left: 1% !important;
     width: 30% !important; }
 
-  .div-product {
+  .div__product {
     width: 100% !important;
     text-align: left !important; }
-    .div-product a {
+    .div__product a {
       font-size: 30px !important; }
 
-  .product-nav {
+  .product__nav {
     width: 100% !important;
     height: 145px !important; }
-    .product-nav a {
+    .product__nav a {
       font-size: 14px !important; }
 
   .filter {
     padding-left: 17px !important; }
 
-  .resultPage-block {
+  .resultPage {
     width: 21%;
     position: absolute;
     display: flex;
@@ -60,7 +60,7 @@
     top: 11% !important;
     right: 75% !important; }
 
-  .main-block {
+  .main--block {
     width: 92% !important;
     margin-top: 25px !important;
     margin-left: 18px !important; }
@@ -78,20 +78,20 @@
     width: 20% !important;
     height: 270px !important; }
 
-  .main--pagination {
+  .main__pagination {
     width: 111% !important; }
 
-  .footer {
+  .footer--block {
     width: 88% !important;
     margin-left: 1% !important; }
 
-  .newsletter--block {
+  .newsletter__block {
     width: 30% !important; }
 
-  .newsletter--form {
+  .newsletter__form {
     width: 355px !important; }
 
-  .footer--nav {
+  .footer__nav {
     width: 80% !important;
     padding-left: 20% !important; } }
 /* ===================== In├¡cio do css ===================== */
@@ -105,7 +105,7 @@ ul {
   list-style-type: none; }
 
 /* ===================== In├¡cio do header ===================== */
-.header-itens {
+.header--block {
   position: fixed;
   width: 95%;
   background-color: #ffffff;
@@ -113,18 +113,17 @@ ul {
   display: flex;
   justify-content: space-around; }
 
-.menu-container {
+.menu__container {
   display: flex;
   justify-content: space-between;
   width: 40%; }
 
-.menu {
+.header__menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 25px;
   width: 91%; }
-  .menu .menu-submenu--item {
+  .header__menu .menu__submenu--item {
     margin-top: 20px;
     font-family: "Montserrat", sans-serif;
     color: #111;
@@ -133,41 +132,40 @@ ul {
     line-height: 20px;
     width: 185%;
     transition: 200ms linear; }
-  .menu a {
+  .header__menu a {
     color: #111; }
 
-.menu-img {
+.menu__img {
   z-index: 1; }
 
-.search-btn,
-.location-btn,
-.account-icon,
-.bag-icon {
+.search__btn,
+.location__btn,
+.account__btn,
+.icon__btn {
   border: none;
   background-color: #ffffff;
   border: none;
   outline: none;
   cursor: pointer; }
 
-.account-icon {
+.account__btn {
   padding-right: 30px; }
 
 .icons {
   width: 10%;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  justify-content: space-around; }
 
-.search-btn,
+.search__btn,
 .icons {
-  padding-top: 10px; }
+  padding-top: 16px; }
 
 .logo {
   width: 112px;
-  padding-top: 10px; }
+  padding-top: 14px; }
 
 .icon-search {
-  font-size: 25px; }
+  font-size: 28px; }
 
 .icon-user,
 .icon-placeholder,
@@ -178,13 +176,13 @@ ul {
   font-size: 17px;
   padding-right: 10px; }
 
-.line--item {
+.icon__line {
   height: 20px;
   border: 1px solid;
   margin: 0 10px; }
 
 /* ===================== In├¡cio do breadcrumb =====================  */
-.resultPage-block {
+.resultPage {
   width: 22%;
   position: absolute;
   display: flex;
@@ -197,17 +195,17 @@ ul {
   .breadcrumb a {
     color: #767676; }
 
-.breadcrumb--line,
-.breadcrumb--item {
+.breadcrumb__line,
+.breadcrumb__item {
   padding-right: 3px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px; }
 
-.breadcrumb--item :not(#polos) {
+.breadcrumb__item :not(#polos) {
   text-decoration: underline; }
 
 /* ===================== In├¡cio do box polo ===================== */
-.product-list--title {
+.product--title {
   color: #111;
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
@@ -229,22 +227,22 @@ ul {
   height: 320px;
   margin-top: 8%; }
 
-.product-list--item {
+.product__list--item {
   color: #111;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   letter-spacing: 0.8px;
   line-height: 20px; }
 
-.product-list {
+.product__list {
   margin-top: 7%;
   width: 24%; }
 
-.div-product {
+.div__product {
   width: 76%;
   text-align: end; }
 
-.product-nav {
+.product__nav {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -252,17 +250,17 @@ ul {
   align-items: baseline;
   padding-left: 20px;
   padding-top: 38px; }
-  .product-nav > ul > li {
+  .product__nav > ul > li {
     margin-bottom: 8%;
     height: 25px; }
 
-.filter {
+.product__filter {
   width: 76%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end; }
 
-.filter-btn {
+.filter__btn {
   height: 35px;
   width: 250px;
   border-radius: 30px;
@@ -274,18 +272,18 @@ ul {
   letter-spacing: 0.93px;
   line-height: 17px;
   background: #FFF; }
-  .filter-btn img {
+  .filter__btn img {
     vertical-align: bottom; }
 
 /* ===================== In├¡cio do slick ===================== */
-.carousel-block {
+.carousel__block {
   display: flex;
   place-items: flex-end;
   width: 92% !important;
   height: 360px !important;
   position: absolute; }
 
-.container-carousel {
+.container__carousel {
   width: 100%;
   height: 274px; }
 
@@ -298,7 +296,7 @@ ul {
 .carousel {
   transform: translate3d(-126px, 0px, 0px); }
 
-.carousel-img {
+.carousel--img {
   width: 1114px; }
 
 .img {
@@ -370,16 +368,7 @@ ul {
 .next {
   right: 9%; }
 
-.slider-second-container {
-  height: 399px;
-  width: 58%;
-  position: absolute;
-  left: 621px;
-  z-index: 1;
-  bottom: 0%;
-  background: linear-gradient(to right, #000 39%, rgba(255, 255, 255, 0) 85%); }
-
-.slider--content {
+.sec-slider--content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -388,7 +377,7 @@ ul {
   top: 0%;
   right: 0%;
   background: linear-gradient(to right, #000 7%, rgba(255, 255, 255, 0) 106%); }
-  .slider--content p {
+  .sec-slider--content p {
     color: #eeeeee;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
@@ -399,8 +388,9 @@ ul {
     font-weight: bold;
     position: absolute;
     top: 25%;
-    left: 4%; }
-  .slider--content h5 {
+    left: 4%;
+    text-transform: uppercase; }
+  .sec-slider--content h5 {
     color: #eeeeee;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -414,7 +404,7 @@ ul {
     position: absolute;
     top: 41%;
     left: 4%; }
-  .slider--content button {
+  .sec-slider--content button {
     border: none;
     outline: none;
     padding: 0;
@@ -436,7 +426,7 @@ ul {
     top: 57%;
     left: 4%; }
 
-.sec-slider--container {
+.first__slider {
   position: absolute;
   left: 42%;
   bottom: 21%;
@@ -447,11 +437,11 @@ ul {
   position: absolute;
   left: 0%;
   top: 0%; }
-  .sec-slider--container .sec-slider--content {
+  .first__slider .slider__content {
     position: absolute;
     top: 25%;
     left: 4%; }
-  .sec-slider--container p {
+  .first__slider p {
     color: #EEE;
     font-family: Montserrat;
     font-size: 20px;
@@ -461,7 +451,7 @@ ul {
     height: 60.57px;
     width: 200px;
     text-transform: uppercase; }
-  .sec-slider--container h5 {
+  .first__slider h5 {
     color: #EEE;
     font-family: Montserrat;
     font-size: 12px;
@@ -472,7 +462,7 @@ ul {
     margin-bottom: 31px;
     margin-top: 15px;
     font-weight: lighter; }
-  .sec-slider--container button {
+  .first__slider button {
     border: none;
     outline: none;
     border-radius: 30px;
@@ -494,13 +484,13 @@ ul {
   justify-content: space-between;
   width: 100%; }
 
-.main-block {
+.main--block {
   width: 87%;
   margin-left: 85px;
   margin-right: 86px;
   margin-top: 35px; }
 
-.main--results {
+.main__results {
   color: #111111;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
@@ -532,7 +522,7 @@ ul {
     font-weight: 700;
     line-height: 20px; }
 
-.discount {
+.items--discount {
   margin-left: 2px;
   margin-top: 5px; }
 
@@ -571,40 +561,39 @@ ul {
   transition: 200ms linear; }
 
 .btn--card:hover,
-.filter-btn:hover,
-.slider--btn:hover,
-.sec-slider--btn:hover {
+.filter__btn:hover,
+.slider--btn:hover {
   opacity: 1;
   cursor: pointer;
   transition: 200ms linear;
   background: #58006d;
   color: #ffffff; }
 
-.main--pagination {
+.main__pagination {
   height: 39px;
   width: 94%;
   display: flex;
   justify-content: center;
   margin-top: 25px;
   align-items: center; }
-  .main--pagination ul {
+  .main__pagination ul {
     display: flex;
     justify-content: space-between;
     width: 359px; }
-    .main--pagination ul li {
+    .main__pagination ul li {
       height: 27px;
       width: 30px;
       background-color: #58006d;
       border-radius: 14px;
       padding-top: 2px;
       text-align: center; }
-      .main--pagination ul li a {
+      .main__pagination ul li a {
         color: #EEE;
         font-family: "Montserrat", sans-serif;
         font-size: 18px;
         vertical-align: sub;
         font-weight: 700; }
-    .main--pagination ul p {
+    .main__pagination ul p {
       color: #111;
       font-family: "Montserrat", sans-serif;
       font-size: 20px;
@@ -615,7 +604,7 @@ ul {
   font-size: 30px; }
 
 /* ===================== Inicio do Footer ===================== */
-.footer {
+.footer--block {
   display: flex;
   margin-top: 5%;
   height: 410px;
@@ -624,17 +613,12 @@ ul {
   margin-left: 5%;
   flex-direction: column; }
 
-.footer-container {
+.footer__container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
   height: 310px; }
-
-.footer--content {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
 
 .promo {
   color: #111;
@@ -643,10 +627,10 @@ ul {
   letter-spacing: 1px;
   line-height: 27px; }
 
-.newsletter--block {
+.newsletter__block {
   width: 38%; }
 
-.newsletter--form {
+.newsletter__form {
   height: 45px;
   width: 510px;
   border-radius: 30px;
@@ -666,7 +650,7 @@ ul {
   font-size: 14px;
   font-style: italic; }
 
-.btn {
+.footer__btn {
   height: 45px;
   width: 155px;
   border-radius: 30px;
@@ -690,7 +674,7 @@ ul {
   background-color: #ffffff;
   color: #58006d; }
 
-.social-media--icons {
+.footer__socialmedia {
   height: 26px;
   width: 189px;
   display: flex;
@@ -698,52 +682,52 @@ ul {
   color: #58006d;
   font-size: 25px; }
 
-.nav--content {
-  width: 80%;
+.footer__content {
+  width: 90%;
   display: flex;
   justify-content: space-around; }
 
-.footer--nav {
+.footer__nav {
   display: flex;
   justify-content: space-between;
   width: 65%; }
-  .footer--nav h5 {
+  .footer__nav h5 {
     color: #111;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 700; }
-  .footer--nav a {
+  .footer__nav a {
     color: #111;
     font-family: "Montserrat", sans-serif;
     font-size: 12px; }
 
-.help {
+.footer__help {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 250px;
   width: 192px; }
 
-.shippment {
+.footer__shippment {
   height: 280px;
   width: 315px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .shippment .shippment-options {
+  .footer__shippment .shippment-options {
     height: 112px;
     width: 192px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
 
-.payment {
+.footer__payment {
   height: 113px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly; }
 
-.text {
+.footer__text {
   color: #767676;
   font-family: Montserrat;
   font-size: 14px;
@@ -753,7 +737,7 @@ ul {
   text-align: center; }
 
 /* ===================== Submenu do hover ===================== */
-.submenu {
+.menu__submenu {
   overflow: hidden;
   transition: 200ms linear;
   cursor: pointer;
@@ -763,33 +747,41 @@ ul {
   width: 106%;
   justify-content: space-around;
   left: 0%; }
-  .submenu .submenu-content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 44%;
-    background-color: #ffffff; }
-    .submenu .submenu-content .category {
-      height: 17px;
-      color: #111;
-      font-family: Montserrat;
-      font-size: 18px;
-      font-weight: bolder;
-      line-height: 17px;
-      width: 22%;
-      margin-top: 50px;
-      margin-left: 9%;
-      margin-right: 180px; }
-    .submenu .submenu-content .products {
-      color: #767676;
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      font-weight: initial;
-      letter-spacing: 0.8px;
-      line-height: 20px;
-      margin-top: 20px; }
 
-.products--clothes {
+.menu__submenu--content {
+  display: none;
+  transition: 200ms linear;
+  cursor: pointer;
+  position: absolute;
+  background: white;
+  width: 106%;
+  height: 45vh;
+  justify-content: space-around;
+  left: 0%; }
+  .menu__submenu--content:hover {
+    display: flex; }
+  .menu__submenu--content .menu--category {
+    height: 17px;
+    color: #111;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 17px;
+    width: 22%;
+    margin-top: 50px;
+    margin-left: 9%;
+    margin-right: 180px; }
+  .menu__submenu--content .menu--products {
+    color: #767676;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: initial;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+    margin-top: 20px;
+    width: 148px; }
+
+.menu__products--clothes {
   display: flex;
   flex-direction: column;
   height: 329px;
@@ -797,33 +789,32 @@ ul {
   margin-top: 10px;
   width: 155px; }
 
-.products--sneakers {
+.menu__products--sneakers {
   display: flex;
   flex-direction: column;
   height: 53px;
   justify-content: space-between;
   margin-top: 10px; }
 
-.products--accessories {
+.menu__products--accessories {
   display: flex;
   flex-direction: column;
   height: 155px;
   justify-content: space-between;
   margin-top: 10px; }
 
-.products--category {
-  height: 225px;
+.menu__products--category {
+  height: 130px;
   margin-top: 10px;
   font-family: Montserrat;
   font-size: 12px;
   line-height: 15px;
   text-align: center;
-  width: 100%;
   display: flex;
   flex-flow: wrap;
   justify-content: end;
   width: 345px; }
-  .products--category li {
+  .menu__products--category li {
     margin: 0 5px; }
 
 .classic,
@@ -865,17 +856,21 @@ ul {
   border: 1px solid #767676;
   padding-top: 7px; }
 
-.submenu-content,
-.submenu {
-  display: none; }
+.menu__submenu--item:hover .menu__submenu--content {
+  display: flex; }
 
-.menu-submenu--item:hover .submenu {
-  display: inline-flex;
+.menu__submenu {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: 1200ms linear; }
+  transition: 1200ms linear;
+  display: none; }
 
-.menu-submenu--item > a:after {
+.menu__submenu--item:hover .menu__submenu {
+  display: inline-flex; }
+  .menu__submenu--item:hover .menu__submenu:hover {
+    display: none; }
+
+.menu__submenu--item > a:after {
   display: block;
   content: '';
   border-bottom: solid 1px #58006d;
@@ -883,32 +878,32 @@ ul {
   transition: 200ms linear;
   width: 55%; }
 
-.menu-submenu--item a:hover:after {
+.menu__submenu--item a:hover:after {
   transform: scaleY(4); }
-.menu-submenu--item a.fromBottom:after {
+.menu__submenu--item a.fromBottom:after {
   transform-origin: 0 0 0 100%; }
 
-.product-container {
+.product__container {
   display: flex;
   width: 100%;
   height: 500px; }
 
-.bag-hover {
+.icon__hover {
   display: none;
   width: 100vh;
   height: 100vh; }
 
-.bag-icon:hover.bag-hover {
+.icon__btn:hover.bag-hover {
   display: block;
   background: black; }
 
-.filter-options,
-.filter-select,
-.filter-colors,
-.filter-materials,
-.filter-colection,
-.results,
-.form-search {
+.filter__options,
+.filter__select,
+.filter__colors,
+.filter__materials,
+.filter__colection,
+.search__results,
+.search__form {
   display: none; }
 
 /*# sourceMappingURL=main.css.map */
