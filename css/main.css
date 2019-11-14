@@ -135,7 +135,8 @@ ul {
   .header__menu a {
     color: #111; }
 
-.menu__img {
+.menu__img,
+.search__btn {
   z-index: 1; }
 
 .search__btn,
@@ -147,6 +148,9 @@ ul {
   border: none;
   outline: none;
   cursor: pointer; }
+
+.icon__btn {
+  padding-bottom: 13px; }
 
 .account__btn {
   padding-right: 30px; }
@@ -224,7 +228,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 320px;
   margin-top: 8%; }
 
 .product__list--item {
@@ -254,11 +257,107 @@ ul {
     margin-bottom: 8%;
     height: 25px; }
 
-.product__filter {
-  width: 76%;
+.filter__modal {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; }
+  align-items: flex-end;
+  width: 100%;
+  height: 1563px;
+  position: absolute;
+  z-index: 1;
+  top: 7%;
+  background-color: rgba(17, 17, 17, 0.15); }
+
+.filters {
+  height: 100%;
+  width: 45%;
+  background-color: #FFF;
+  position: absolute;
+  right: 55%;
+  display: flex;
+  flex-direction: column; }
+
+.product__btn {
+  padding-left: 83px; }
+
+.filter__options {
+  display: flex;
+  color: #111;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  width: 300px;
+  align-self: center;
+  margin-top: 5%; }
+
+.filter__clear {
+  display: flex;
+  width: 73%;
+  padding-left: 50px;
+  justify-content: space-between;
+  margin-top: 13%; }
+
+.product__btn {
+  box-sizing: border-box;
+  height: 37px;
+  width: 185px;
+  border-radius: 30px;
+  background-color: #FFF;
+  border: 1px solid #58006D;
+  color: #58006D;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 6px; }
+
+.filter__clean {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 17px;
+  line-height: 17px;
+  width: 112px;
+  text-decoration: underline; }
+
+.filter__select {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-top: 50px;
+  height: 130px;
+  justify-content: space-between; }
+  .filter__select h6 {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px; }
+  .filter__select span {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 17px;
+    width: 54%; }
+  .filter__select input {
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    background-color: #FFF;
+    border: 1px solid #111; }
+
+.most__sell,
+.highest__price,
+.lower__price {
+  display: flex;
+  justify-content: space-between; }
+
+.most__sell,
+.highest__price {
+  padding-right: 8px; }
+
+.lower__price {
+  margin-right: 22%; }
 
 .filter__btn {
   height: 35px;
@@ -274,6 +373,73 @@ ul {
   background: #FFF; }
   .filter__btn img {
     vertical-align: bottom; }
+
+.filter__colors {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px; }
+  .filter__colors h6 {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    padding-top: 50px;
+    padding-bottom: 20px; }
+  .filter__colors input {
+    box-sizing: border-box;
+    height: 25px;
+    width: 25px;
+    border-radius: 69px;
+    -webkit-appearance: none; }
+
+.filter__colors--one {
+  background: #F36; }
+
+.filter__colors--two {
+  background: #33E1FF; }
+
+.filter__colors--three {
+  background: #39F; }
+
+.filter__colors--four {
+  background: #2AC940; }
+
+.filter__colors--five {
+  background: #FA9917; }
+
+.filter__colors--six {
+  background: #FF5F58; }
+
+.filter__colors--seven {
+  background: #FFF; }
+
+.filter__colors--eight {
+  background: #F2F2F2; }
+
+.filter__colors--nine {
+  background: #BDBDBD; }
+
+.filter__colors--ten {
+  background: #4F4F4F; }
+
+.filter__colors--eleven {
+  background: #000; }
+
+.filter__colors--twelve {
+  background: #1C029B; }
+
+.filter__colors--thirteen {
+  background: #F36; }
+
+.filter__colors--fourteen {
+  background-color: #FB00CB; }
+
+.filter__colors--fifteen {
+  background: #F467EA; }
+
+.filter__colors--sexteen {
+  background: #F36; }
 
 /* ===================== In├¡cio do slick ===================== */
 .carousel__block {
@@ -886,24 +1052,111 @@ ul {
 .product__container {
   display: flex;
   width: 100%;
-  height: 500px; }
+  height: 512px; }
 
 .icon__hover {
   display: none;
   width: 100vh;
   height: 100vh; }
 
-.icon__btn:hover.bag-hover {
-  display: block;
-  background: black; }
-
-.filter__options,
-.filter__select,
-.filter__colors,
 .filter__materials,
 .filter__colection,
-.search__results,
-.search__form {
+.search__products {
   display: none; }
+
+.search__form input {
+  height: 73px;
+  width: 656px;
+  color: #EEE;
+  font-family: Montserrat;
+  font-size: 60px;
+  line-height: 73px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #58006D; }
+
+.close__btn {
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  text-align-last: end;
+  padding-top: 20px; }
+
+.search__results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .search__results span {
+    height: 17px;
+    width: 239px;
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 17px; }
+  .search__results h6 {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px; }
+  .search__results .suggestion__btn {
+    box-sizing: border-box;
+    height: 35px;
+    width: 162px;
+    border-radius: 30px;
+    background-color: #FFF;
+    border: 1px solid #58006D;
+    color: #58006D;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 17px;
+    outline: none; }
+
+.search__products {
+  width: 100%;
+  height: 45vh;
+  justify-content: space-around; }
+
+.search__suggestion {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 50%; }
+
+.bag__container {
+  width: 111%;
+  height: 100vh;
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  top: 60px;
+  padding-left: 98px;
+  background: white; }
+  .bag__container .bag__modal {
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    margin-left: 50px;
+    background: #767676; }
+  .bag__container h3 {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 50px;
+    line-height: 61px;
+    display: none; }
+  .bag__container .buy__btn {
+    height: 35px;
+    width: 217.58px;
+    border-radius: 30px;
+    background-color: #58006D;
+    position: absolute;
+    color: #EEE;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    left: 15%; }
 
 /*# sourceMappingURL=main.css.map */

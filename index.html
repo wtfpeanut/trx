@@ -247,30 +247,31 @@
                         </div>
                     </li>
                 </ul>
-                <div class="search__products">
-                    <button class="search__btn">
-                        <!-- abre a modal de pesquisa -->
-                        <i class="icon-search"></i>
+                <button class="search__btn">
+                    <!-- abre a modal de pesquisa -->
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+            <div class="search__products">
+                <div class="search__results">
+                    <button class="close__btn">
+                        <i class="icon-close"></i>
                     </button>
-
-                    <div class="search__results">
-                        <div class="search__form">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <span class="icon-close"></span>
-                        <span>709 produtos encontrados para " "</span>
-                        <button class="search__btn">Ver todos</button>
-                        <div class="search__suggestion">
-                            <h6>Sugestões</h6>
-                            <span>Sugestão 1</span>
-                            <span>Sugestão 2</span>
-                            <span>Sugestão 3</span>
-                            <span>Sugestão 4</span>
-                            <span>Sugestão 5</span>
-                            <span>Sugestão 6</span>
-                            <span>Sugestão 7</span>
-                            <span>Sugestão 8</span>
-                        </div>
+                    <div class="search__form">
+                        <input type="text" class="form-control">
+                    </div>
+                    <span>709 produtos encontrados para " "</span>
+                    <button class="suggestion__btn">Ver todos</button>
+                    <div class="search__suggestion">
+                        <h6>Sugestões</h6>
+                        <span>Sugestão 1</span>
+                        <span>Sugestão 2</span>
+                        <span>Sugestão 3</span>
+                        <span>Sugestão 4</span>
+                        <span>Sugestão 5</span>
+                        <span>Sugestão 6</span>
+                        <span>Sugestão 7</span>
+                        <span>Sugestão 8</span>
                     </div>
                 </div>
             </div>
@@ -286,16 +287,24 @@
                     </button>
                 </div>
                 <div class="icon__line"></div>
-                <div class="icon__bag">
-                    <button class="icon__btn">
-                        <i class="icon-shopping-bag"></i>
-                    </button>
-                    <div class="icon__hover">
-                        <h3 class="bag-title">Sacola</h3>
-                    </div>
-                </div>
+                <button class="icon__btn">
+                    <i class="icon-shopping-bag"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- sacola modal -->
+        <div class="bag__container">
+            <div class="bag__modal">
+                <div class="bag__items">
+                    <h3>Sacola</h3>
+                </div>
+            </div>
+            <div class="finish__btn">
+                <button class="buy__btn">Finalizar a compra</button>
+            </div>
+
+            </button>
         </div>
     </header>
     <!--------------------------Breadcrumb da página -------------------------->
@@ -330,45 +339,63 @@
                     <li><a href="#" class="product__list--item">Manga Curta</a></li>
                 </ul>
             </nav>
-            <div class="product__filter">
+            <div class="product__btn">
                 <button class="filter__btn"><i class="icon-control"></i>Filtros e separadores</button>
-                <div class="filter__options">
-                    <h4>Filtros e separadores</h4>
+            </div>
+
+            <div class="filter__modal">
+                <div class="filters">
+                    <div class="filter__options">
+                        <h4>Filtros e separadores</h4>
+                    </div>
                     <div class="filter__clear">
                         <a class="filter__clean">Limpar Tudo</a>
+                        <button class="product__btn">Ver 266 produtos</button>
                     </div>
-                    <button class="product__btn">ver 266 produtos</button>
+                    <div class="filter__select">
+                        <h6>Classificar por</h6>
+                        <div class="most__sell">
+                            <span>Mais Vendido</span>
+                            <input type="radio" name="select" value="vendido"><br>
+                        </div>
+                        <div class="highest__price">
+                            <span>Maior Preço</span>
+                            <input type="radio" name="select" value="maior"><br>
+                        </div>
+                        <div class="lower__price">
+                            <span>Menor Preço</span>
+                            <input type="radio" name="select" value="menor">
+                        </div>
+                    </div>
+                    <div class="filter__colors">
+                        <div>
+                            <h6>Cores</h6>
+                        </div>
+
+                        <input type="checkbox" class="filter__colors--one">
+                        <input type="checkbox" class="filter__colors--two">
+                        <input type="checkbox" class="filter__colors--three">
+                        <input type="checkbox" class="filter__colors--four">
+                        <input type="checkbox" class="filter__colors--five">
+                        <input type="checkbox" class="filter__colors--six">
+                        <input type="checkbox" class="filter__colors--seven">
+                        <input type="checkbox" class="filter__colors--eight">
+                        <input type="checkbox" class="filter__colors--nine">
+                        <input type="checkbox" class="filter__colors--ten">
+                        <input type="checkbox" class="filter__colors--eleven">
+                        <input type="checkbox" class="filter__colors--twelve">
+                        <input type="checkbox" class="filter__colors--thirteen">
+                        <input type="checkbox" class="filter__colors--fourteen">
+                        <input type="checkbox" class="filter__colors--fifteen">
+                        <input type="checkbox" class="filter__colors--sixteen">
+                    </div>
                 </div>
-                <div class="filter__select">
-                    <h6>Classificar por</h6>
-                    <span>Mais Vendido</span>
-                    <input type="radio" name="" value=""><br>
-                    <span>Maiopr Preço</span>
-                    <input type="radio" name="" value=""><br>
-                    <span>Menor Preço</span>
-                    <input type="radio" name="" value="">
-                </div>
-                <div class="filter__colors">
-                    <h6>Cores</h6>
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                    <input type="checkbox" name="" value="">
-                </div>
-                <div class="filter__materials"></div>
-                <div class="filter__colection"></div>
+
+
+
+
+                <div class="filter__materials">Material</div>
+                <div class="filter__colection">Coleção</div>
             </div>
         </div>
         <!-------------- --Slick -------------- -->

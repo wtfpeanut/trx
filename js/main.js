@@ -26,17 +26,17 @@ $('.carousel').slick({
 
 // Modal de pesquisa
 
-var modal = document.getElementsByClassName("search__results");
-var btn = document.getElementsByClassName("search__btn");
-var span = document.getElementsByClassName("icon-close")[0];
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-span.onclick = function () {
-    modal.style.display = "none";
-}
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// var modal = document.getElementsByClassName("search__results");
+// var btn = document.getElementsByClassName("search__btn");
+// var span = document.getElementsByClassName("icon-close")[0];
+// btn.onclick = function () {
+//     modal.style.display = "block";
+// }
+// span.onclick = function () {
+//     modal.style.display = "none";
+// }
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }

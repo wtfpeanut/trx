@@ -347,7 +347,8 @@ ul {
     }
 }
 
-.menu__img {
+.menu__img,
+.search__btn {
     z-index: 1;
 }
 
@@ -360,6 +361,10 @@ ul {
     background-color: $white;
     @include button;
     cursor: pointer;
+}
+
+.icon__btn {
+    padding-bottom: 13px;
 }
 
 .account__btn {
@@ -457,7 +462,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: 320px;
+    // height: 320px;
     margin-top: 8%;
 }
 
@@ -501,11 +506,123 @@ ul {
     }
 }
 
-.product__filter {
-    width: 76%;
+.filter__modal {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    width: 100%;
+    height: 1563px;
+    position: absolute;
+    z-index: 1;
+    top: 7%;
+    background-color: rgba(17, 17, 17, 0.15);
+}
+
+.filters {
+    height: 100%;
+    width: 45%;
+    background-color: #FFF;
+    position: absolute;
+    right: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product__btn {
+    padding-left: 83px;
+}
+
+.filter__options {
+    display: flex;
+    color: #111;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    width: 300px;
+    align-self: center;
+    margin-top: 5%;
+}
+
+.filter__clear {
+    display: flex;
+    width: 73%;
+    padding-left: 50px;
+    justify-content: space-between;
+    margin-top: 13%;
+}
+
+.product__btn {
+    box-sizing: border-box;
+    height: 37px;
+    width: 185px;
+    border-radius: 30px;
+    background-color: #FFF;
+    border: 1px solid #58006D;
+    color: #58006D;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 6px;
+}
+
+.filter__clean {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 17px;
+    line-height: 17px;
+    width: 112px;
+    text-decoration: underline;
+}
+
+.filter__select {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 50px;
+    height: 130px;
+    justify-content: space-between;
+
+    h6 {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+    }
+
+    span {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 17px;
+        width: 54%;
+    }
+
+    input {
+        box-sizing: border-box;
+        height: 20px;
+        width: 20px;
+        background-color: #FFF;
+        border: 1px solid #111;
+    }
+}
+
+.most__sell,
+.highest__price,
+.lower__price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.most__sell,
+.highest__price {
+    padding-right: 8px;
+}
+
+.lower__price {
+    margin-right: 22%;
 }
 
 .filter__btn {
@@ -525,6 +642,97 @@ ul {
         vertical-align: bottom;
     }
 }
+
+.filter__colors {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+
+    h6 {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    input {
+        box-sizing: border-box;
+        height: 25px;
+        width: 25px;
+        border-radius: 69px;
+        -webkit-appearance: none;
+    }
+}
+
+.filter__colors--one {
+    background: #F36;
+}
+
+.filter__colors--two {
+    background: #33E1FF;
+}
+
+.filter__colors--three {
+    background: #39F;
+}
+
+.filter__colors--four {
+    background: #2AC940;
+}
+
+.filter__colors--five {
+    background: #FA9917;
+}
+
+.filter__colors--six {
+    background: #FF5F58;
+}
+
+.filter__colors--seven {
+    background: #FFF;
+}
+
+.filter__colors--eight {
+    background: #F2F2F2;
+}
+
+.filter__colors--nine {
+    background: #BDBDBD;
+}
+
+.filter__colors--ten {
+    background: #4F4F4F;
+}
+
+.filter__colors--eleven {
+    background: #000;
+}
+
+.filter__colors--twelve {
+    background: #1C029B;
+}
+
+.filter__colors--thirteen {
+    background: #F36;
+}
+
+.filter__colors--fourteen {
+    background-color: #FB00CB;
+}
+
+.filter__colors--fifteen {
+    background: #F467EA;
+}
+
+.filter__colors--sexteen {
+    background: #F36;
+}
+
+
+
 
 /* ===================== Início do slick ===================== */
 
@@ -1282,7 +1490,7 @@ ul {
 .product__container {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 512px;
 }
 
 // hover sacola
@@ -1294,20 +1502,131 @@ ul {
 
 }
 
-.icon__btn:hover.bag-hover {
-    display: block;
-    background: black;
-}
-
 
 // filtro
 
-.filter__options,
-.filter__select,
-.filter__colors,
 .filter__materials,
 .filter__colection,
-.search__results,
-.search__form {
+.search__products {
+    // .search__results,
+    // .search__form 
     display: none;
+}
+
+.search__form {
+    input {
+        height: 73px;
+        width: 656px;
+        color: #EEE;
+        font-family: Montserrat;
+        font-size: 60px;
+        line-height: 73px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #58006D;
+    }
+}
+
+.close__btn {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    text-align-last: end;
+    padding-top: 20px;
+}
+
+.search__results {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+        height: 17px;
+        width: 239px;
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    h6 {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+    }
+
+    .suggestion__btn {
+        box-sizing: border-box;
+        height: 35px;
+        width: 162px;
+        border-radius: 30px;
+        background-color: #FFF;
+        border: 1px solid #58006D;
+        color: #58006D;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 17px;
+        outline: none;
+    }
+}
+
+.search__products {
+    // display: flex;
+    width: 100%;
+    height: 45vh;
+    justify-content: space-around;
+}
+
+.search__suggestion {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 50%;
+}
+
+// sacola
+.bag__container {
+    width: 111%;
+    height: 100vh;
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    top: 60px;
+    padding-left: 98px;
+    background: white;
+
+    .bag__modal {
+        width: 30%;
+        height: 100vh;
+        position: absolute;
+        margin-left: 50px;
+        background: #767676;
+    }
+
+    h3 {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 50px;
+        line-height: 61px;
+        display: none;
+    }
+
+    .buy__btn {
+        height: 35px;
+        width: 217.58px;
+        border-radius: 30px;
+        background-color: #58006D;
+        position: absolute;
+        color: #EEE;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 20px;
+        border: none;
+        left: 15%;
+    }
 }
