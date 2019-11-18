@@ -247,34 +247,107 @@
                         </div>
                     </li>
                 </ul>
-                <button class="search__btn">
-                    <!-- abre a modal de pesquisa -->
-                    <i class="icon-search"></i>
-                </button>
+                <button class="search__btn"><i class="icon-search"></i></button>
             </div>
-            <div class="search__products">
-                <div class="search__results">
-                    <button class="close__btn">
-                        <i class="icon-close"></i>
-                    </button>
-                    <div class="search__form">
-                        <input type="text" class="form-control">
+            <!-- abre a modal de pesquisa -->
+            <div class="search__modal">
+                <div class="product">
+                    <div class="search__results">
+                        <button class="close__btn">
+                            <i class="icon-close"></i>
+                        </button>
+                        <div class="search__form">
+                            <input type="text" class="form-control">
+                        </div>
+                        <span>709 produtos encontrados para "<span class="search__result"></span> "</span>
+                        <button class="suggestion__btn">Ver todos</button>
+                        <div class="search__suggestion">
+                            <h6>Sugestões</h6>
+                            <span>Sugestão 1</span>
+                            <span>Sugestão 2</span>
+                            <span>Sugestão 3</span>
+                            <span>Sugestão 4</span>
+                            <span>Sugestão 5</span>
+                            <span>Sugestão 6</span>
+                            <span>Sugestão 7</span>
+                            <span>Sugestão 8</span>
+                        </div>
                     </div>
-                    <span>709 produtos encontrados para " "</span>
-                    <button class="suggestion__btn">Ver todos</button>
-                    <div class="search__suggestion">
-                        <h6>Sugestões</h6>
-                        <span>Sugestão 1</span>
-                        <span>Sugestão 2</span>
-                        <span>Sugestão 3</span>
-                        <span>Sugestão 4</span>
-                        <span>Sugestão 5</span>
-                        <span>Sugestão 6</span>
-                        <span>Sugestão 7</span>
-                        <span>Sugestão 8</span>
+                    <div class="card__results">
+                        <!-------------- -- Primeiro card -------------- -->
+                        <div class="items--card">
+                            <div class="card--img">
+                                <img class="card" src="assets/img1.png" alt="modelo polo">
+                                <img src="assets/img1.1.png" alt="modelo polo">
+                                <div class="items--discount">
+                                    <img src="assets/discount-tag.png" alt="desconto">
+                                </div>
+                                <p>polo trx mc clássica manga curta</p>
+                                <p class="old--price">R$ 399,00</p>
+                                <p class="new--price">R$ 339,15</p>
+                                <div class="card--btn">
+                                    <button class="btn--card">Compra Rápida</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-------------- -- Segundo card -------------- -->
+
+                        <div class="items--card">
+                            <div class="card--img">
+                                <img class="card" src="assets/Image.png" alt="modelo polo">
+                                <img src="assets/image1.png" alt="modelo polo">
+                                <div class="items--discount">
+                                    <img src="assets/discount-tag.png" alt="desconto">
+                                </div>
+                                <p>polo trx mc clássica manga curta</p>
+                                <p class="old--price">R$ 399,00</p>
+                                <p class="new--price">R$ 339,15</p>
+                                <div class="card--btn">
+                                    <button class="btn--card">Compra Rápida</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-------------- -- Terceiro card -------------- -->
+
+                        <div class="items--card">
+                            <div class="card--img">
+                                <img class="card" src="assets/img2.png" alt="modelo polo">
+                                <img src="assets/img2.1.png" alt="modelo polo">
+                                <p>polo trx mc clássica manga curta</p>
+                                <p class="old--price">R$ 399,00</p>
+                                <p class="new--price">R$ 339,15</p>
+                                <div class="card--btn">
+                                    <button class="btn--card">Compra Rápida</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-------------- -- Quarto card -------------- -->
+
+                        <div class="items--card">
+                            <div class="card--img">
+                                <img class="card" src="assets/img3.png" alt="modelo polo">
+                                <img src="assets/img3.1.png" alt="modelo polo">
+                                <p>polo trx mc clássica manga curta</p>
+                                <p class="old--price">R$ 399,00</p>
+                                <p class="new--price">R$ 339,15</p>
+                                <div class="card--btn">
+                                    <button class="btn--card">Compra Rápida</button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Ícones -->
+
             <div class="icons">
                 <div class="icons__location">
                     <button class="location__btn">
@@ -300,11 +373,16 @@
                     <h3>Sacola</h3>
                 </div>
             </div>
-            <div class="finish__btn">
-                <button class="buy__btn">Finalizar a compra</button>
+            <div class="bag__products">
+                <div class="bag__total">
+                    <h4>Total</h4>
+                    <span>R$</span>
+                </div>
+                <div class="finish__btn">
+                    <button class="buy__btn">Finalizar a compra</button>
+                </div>
             </div>
 
-            </button>
         </div>
     </header>
     <!--------------------------Breadcrumb da página -------------------------->
@@ -345,12 +423,15 @@
 
             <div class="filter__modal">
                 <div class="filters">
+                    <div class="filter__close">
+                        <i class="icon-close"></i>
+                    </div>
                     <div class="filter__options">
                         <h4>Filtros e separadores</h4>
                     </div>
                     <div class="filter__clear">
                         <a class="filter__clean">Limpar Tudo</a>
-                        <button class="product__btn">Ver 266 produtos</button>
+                        <button class="modal__btn">Ver 266 produtos</button>
                     </div>
                     <div class="filter__select">
                         <h6>Classificar por</h6>
@@ -389,13 +470,46 @@
                         <input type="checkbox" class="filter__colors--fifteen">
                         <input type="checkbox" class="filter__colors--sixteen">
                     </div>
+                    <div class="filter__size">
+                        <div>
+                            <h4>Tamanho (2)</h4>
+                            <i class="icon-up-arow"></i>
+                        </div>
+                        <div class="size__pp">
+                            <span>PP</span>
+                            <input type="checkbox" name="select" value="size"><br>
+                        </div>
+                        <div class="size___p">
+                            <span>P</span>
+                            <input type="checkbox" name="select" value="size"><br>
+                        </div>
+                        <div class="size__m">
+                            <span>M</span>
+                            <input type="checkbox" name="select" value="size">
+                        </div>
+                        <div class="size__g">
+                            <span>G</span>
+                            <input type="checkbox" name="select" value="size">
+                        </div>
+                        <div class="size__gg">
+                            <span>GG</span>
+                            <input type="checkbox" name="select" value="size">
+                        </div>
+                        <div>
+                            <div class="filter__materials">Material</div>
+                            <i class="icon-down-arow"></i>
+                        </div>
+                        <div>
+                            <div class="filter__colection">Coleção</div>
+                            <i class="icon-down-arow"></i>
+                        </div>
+                    </div>
+
                 </div>
 
 
 
 
-                <div class="filter__materials">Material</div>
-                <div class="filter__colection">Coleção</div>
             </div>
         </div>
         <!-------------- --Slick -------------- -->
@@ -430,12 +544,13 @@
                         </div>
                     </div>
                 </div>
+
+                <!-------------- -- Setas do carrossel -------------- -->
                 <div>
-                    <!-------------- -- Setas do carrossel -------------- -->
-                    <img class="prev" src="assets/icon-left-arow.png" alt="seta">
+                    <i class="icon-left-arow"></i>
                 </div>
                 <div>
-                    <img class="next" src="assets/icon-righ-arow.png" alt="seta">
+                    <i class="icon-righ-arow"></i>
                 </div>
             </div>
     </section>

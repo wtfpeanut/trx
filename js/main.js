@@ -1,4 +1,4 @@
-// Prevent Default dos links
+// ============= Prevent Default dos links =============
 
 $("a").click(function (event) {
     event.preventDefault();
@@ -7,7 +7,7 @@ $("a").click(function (event) {
     })
 });
 
-// Slick Js
+// ============= Slick Js =============
 
 $('.carousel').slick({
     dots: true,
@@ -20,23 +20,67 @@ $('.carousel').slick({
     slidesToScroll: 1,
     fade: true,
     cssEase: 'linear',
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: $('.icon-left-arow'),
+    nextArrow: $('.icon-righ-arow'),
 });
 
-// Modal de pesquisa
 
-// var modal = document.getElementsByClassName("search__results");
-// var btn = document.getElementsByClassName("search__btn");
-// var span = document.getElementsByClassName("icon-close")[0];
-// btn.onclick = function () {
-//     modal.style.display = "block";
-// }
-// span.onclick = function () {
-//     modal.style.display = "none";
-// }
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
+
+// ============= Modal de pesquisa =============
+$(function () {
+    $('.search__btn').on('click', function () {
+        $('.search__modal').css('display', 'flex');
+    });
+    $('.close__btn').on('click', function () {
+        $('.search__modal').css('display', 'none');
+    });
+});
+
+$(function () {
+    $('.filter__btn').on('click', function () {
+        $('.filter__modal').css('display', 'flex');
+    });
+    $('.filter__close').on('click', function () {
+        $('.filter__modal').css('display', 'none');
+    });
+});
+
+
+// $(function () {
+//     $('.icon__btn').mouseenter(function () {
+//         $('.bag__container').css('display', 'flex');
+//     });
+//     $('.bag__products').mouseleave(function () {
+//         $('.bag__container').css('display', 'none');
+//     });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function products() {
+    let output = "";
+
+    array.forEach(item => {
+        output += `
+        <div class="items--card">
+        <img class="card" src="${item.dataimg}">
+        <div class="items--discount" src="${item.dataimg}"></div>
+        <p class="old--price">R$ ${item.oldprice}</p>
+        <p class="new--price">R$ ${item.newprice}</p>
+        <p class="color">R$ ${item.color}</p>
+        <p class="size">R$ ${item.size}</p>
+        </div>`;
+    });
+    document.getElementsByClassName("items").innerHTML = output;
+}

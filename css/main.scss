@@ -507,7 +507,7 @@ ul {
 }
 
 .filter__modal {
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
@@ -516,6 +516,14 @@ ul {
     z-index: 1;
     top: 7%;
     background-color: rgba(17, 17, 17, 0.15);
+}
+
+.filter__close {
+    position: absolute;
+    right: 3%;
+    top: 1%;
+    font-size: 21px;
+    cursor: pointer;
 }
 
 .filters {
@@ -542,7 +550,7 @@ ul {
     text-align: center;
     width: 300px;
     align-self: center;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .filter__clear {
@@ -553,10 +561,12 @@ ul {
     margin-top: 13%;
 }
 
-.product__btn {
+.modal__btn {
     box-sizing: border-box;
     height: 37px;
     width: 185px;
+    outline: none;
+    cursor: pointer;
     border-radius: 30px;
     background-color: #FFF;
     border: 1px solid #58006D;
@@ -573,6 +583,7 @@ ul {
     font-size: 17px;
     line-height: 17px;
     width: 112px;
+    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -614,6 +625,10 @@ ul {
 .lower__price {
     display: flex;
     justify-content: space-between;
+
+    input {
+        cursor: pointer;
+    }
 }
 
 .most__sell,
@@ -644,8 +659,8 @@ ul {
 }
 
 .filter__colors {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     padding-left: 50px;
 
     h6 {
@@ -667,68 +682,185 @@ ul {
     }
 }
 
+
+
 .filter__colors--one {
     background: #F36;
+    cursor: pointer;
 }
 
 .filter__colors--two {
     background: #33E1FF;
+    cursor: pointer;
 }
 
 .filter__colors--three {
     background: #39F;
+    cursor: pointer;
 }
 
 .filter__colors--four {
     background: #2AC940;
+    cursor: pointer;
 }
 
 .filter__colors--five {
     background: #FA9917;
+    cursor: pointer;
 }
 
 .filter__colors--six {
     background: #FF5F58;
+    cursor: pointer;
 }
 
 .filter__colors--seven {
     background: #FFF;
+    cursor: pointer;
 }
 
 .filter__colors--eight {
     background: #F2F2F2;
+    cursor: pointer;
 }
 
 .filter__colors--nine {
     background: #BDBDBD;
+    cursor: pointer;
 }
 
 .filter__colors--ten {
     background: #4F4F4F;
+    cursor: pointer;
 }
 
 .filter__colors--eleven {
     background: #000;
+    cursor: pointer;
 }
 
 .filter__colors--twelve {
     background: #1C029B;
+    cursor: pointer;
 }
 
 .filter__colors--thirteen {
     background: #F36;
+    cursor: pointer;
 }
 
 .filter__colors--fourteen {
     background-color: #FB00CB;
+    cursor: pointer;
 }
 
 .filter__colors--fifteen {
     background: #F467EA;
+    cursor: pointer;
 }
 
 .filter__colors--sexteen {
     background: #F36;
+    cursor: pointer;
+}
+
+.filter__size {
+    padding-left: 50px;
+    padding-top: 50px;
+    width: 73%;
+
+    h4 {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        padding-bottom: 20px;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    input {
+        box-sizing: border-box;
+        height: 20px;
+        width: 20px;
+        border-radius: 4px;
+        background-color: #FFF;
+        border: 1px solid #767676;
+        cursor: pointer;
+    }
+}
+
+.size__pp {
+    margin-top: 15px;
+
+    span {
+        width: 96%;
+        padding-bottom: 20px;
+    }
+}
+
+.size___p {
+
+    span {
+        width: 96%;
+        padding-bottom: 20px;
+    }
+}
+
+.size__m {
+
+    span {
+        padding-bottom: 20px;
+    }
+}
+
+.size__g {
+
+    span {
+        padding-bottom: 20px;
+    }
+}
+
+.size,
+.material,
+.collection {
+    transform: rotate(270deg);
+    background-color: black;
+    width: 20px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+.icon-down-arow {
+    margin-top: 45px;
+    font-size: 25px;
+}
+
+.icon-up-arow {
+    transform: rotate(180deg);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.filter__materials,
+.filter__colection {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    padding-top: 50px;
 }
 
 
@@ -833,20 +965,22 @@ ul {
     margin-bottom: 4% !important;
 }
 
-.next,
-.prev {
-    position: $position;
-    height: 40px;
-    width: 25px;
-    top: 124%;
+.icon-left-arow,
+.icon-righ-arow {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 447px;
+    color: #FFF;
+    font-size: 35px;
 }
 
-.prev {
-    right: 12%;
+.icon-left-arow {
+    left: 85%;
 }
 
-.next {
-    right: 9%;
+.icon-righ-arow {
+    left: 89%;
 }
 
 // .slider-second-container {
@@ -1059,6 +1193,11 @@ ul {
     }
 }
 
+.card--btn {
+    position: absolute;
+    top: 408px;
+}
+
 .btn--card {
     @include button;
     background: $white;
@@ -1135,10 +1274,6 @@ ul {
     }
 }
 
-.icon-left-arow,
-.icon-righ-arow {
-    font-size: 30px;
-}
 
 /* ===================== Inicio do Footer ===================== */
 
@@ -1212,6 +1347,7 @@ ul {
     outline: none;
     line-height: 20px;
     font-weight: normal;
+    cursor: pointer;
 }
 
 .icon-facebook,
@@ -1505,18 +1641,39 @@ ul {
 
 // filtro
 
-.filter__materials,
-.filter__colection,
-.search__products {
-    // .search__results,
-    // .search__form 
+// .search__products {
+// .search__results,
+// .search__form 
+// display: none;
+// }
+
+// -------------------------- Busca
+
+.search__modal {
+    position: absolute;
+    top: 53%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, .3);
     display: none;
+    flex-direction: column;
+    z-index: -9999;
+}
+
+.product {
+    height: 90vh;
+    background: #ffffff;
 }
 
 .search__form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 57px;
+
     input {
         height: 73px;
-        width: 656px;
+        width: 55%;
         color: #EEE;
         font-family: Montserrat;
         font-size: 60px;
@@ -1524,6 +1681,8 @@ ul {
         border: none;
         outline: none;
         border-bottom: 1px solid #58006D;
+        width: 74%;
+        color: #000;
     }
 }
 
@@ -1534,7 +1693,11 @@ ul {
     cursor: pointer;
     font-size: 30px;
     text-align-last: end;
-    padding-top: 20px;
+    padding-top: 30px;
+    font-size: 25px;
+    width: 37px;
+    align-self: flex-end;
+
 }
 
 .search__results {
@@ -1542,6 +1705,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 91%;
 
     span {
         height: 17px;
@@ -1550,6 +1714,7 @@ ul {
         font-family: Montserrat;
         font-size: 14px;
         line-height: 17px;
+        margin-top: 10px;
     }
 
     h6 {
@@ -1558,6 +1723,7 @@ ul {
         font-size: 14px;
         font-weight: 700;
         line-height: 17px;
+        margin-bottom: 10px;
     }
 
     .suggestion__btn {
@@ -1572,21 +1738,29 @@ ul {
         font-size: 14px;
         line-height: 17px;
         outline: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
-.search__products {
-    // display: flex;
-    width: 100%;
-    height: 45vh;
-    justify-content: space-around;
-}
 
 .search__suggestion {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 50%;
+
+    span {
+        margin-top: 10px;
+    }
+}
+
+.card__results {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 97%;
+
 }
 
 // sacola
@@ -1601,11 +1775,11 @@ ul {
     background: white;
 
     .bag__modal {
-        width: 30%;
+        width: 49%;
         height: 100vh;
         position: absolute;
-        margin-left: 50px;
-        background: #767676;
+        margin-left: 58px;
+        background-color: rgba(17, 17, 17, 0.15);
     }
 
     h3 {
@@ -1627,6 +1801,40 @@ ul {
         font-size: 16px;
         line-height: 20px;
         border: none;
-        left: 15%;
+        outline: none;
+        cursor: pointer;
     }
+}
+
+.bag__products {
+    width: 35%;
+    background: #FFF;
+    position: absolute;
+    left: 55%;
+    height: 100vh;
+
+    h4,
+    span {
+        color: #111;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 50px;
+    }
+}
+
+.bag__total {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    position: absolute;
+    top: 42%;
+    right: 25%;
+}
+
+.finish__btn {
+    position: absolute;
+    top: 47%;
+    right: 90%;
 }
