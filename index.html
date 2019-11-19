@@ -259,7 +259,13 @@
                         <div class="search__form">
                             <input type="text" class="form-control">
                         </div>
-                        <span>709 produtos encontrados para "<span class="search__result"></span> "</span>
+                        <div class="search">
+                            <span class="form__products">709 produtos encontrados para</span>
+                            <span class="product__found">"
+                                <input type="text" class="search__result">
+                                "
+                            </span>
+                        </div>
                         <button class="suggestion__btn">Ver todos</button>
                         <div class="search__suggestion">
                             <h6>Sugestões</h6>
@@ -452,7 +458,6 @@
                         <div>
                             <h6>Cores</h6>
                         </div>
-
                         <input type="checkbox" class="filter__colors--one">
                         <input type="checkbox" class="filter__colors--two">
                         <input type="checkbox" class="filter__colors--three">
@@ -633,7 +638,8 @@
         <div class="main__pagination">
             <nav>
                 <ul>
-                    <i class="icon-left-arow"></i>
+                    <div class="left__arrow"><i class="icon-lef-arow"></i></div>
+
                     <li><a href="#">1</a></li>
                     <p>...</p>
                     <li><a href="#">3</a></li>
@@ -641,7 +647,8 @@
                     <li><a href="#">5</a></li>
                     <p>...</p>
                     <li><a href="#">20</a></li>
-                    <i class="icon-righ-arow"></i>
+                    <div class="right__arrow"><i class="icon-right-arow"></i></div>
+
                 </ul>
             </nav>
         </div>

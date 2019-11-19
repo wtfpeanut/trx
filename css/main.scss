@@ -33,12 +33,16 @@ $position: absolute;
 
 @media(min-width:1024px) and (max-width: 1919px) {
 
+    html {
+        width: 95% !important;
+    }
+
     .containerr {
-        width: 100%;
+        width: 100% !important;
     }
 
     .header--block {
-        width: 88% !important;
+        width: 95% !important;
     }
 
     .header__menu {
@@ -49,6 +53,18 @@ $position: absolute;
         .icons {
             padding-right: 20px;
         }
+
+        .menu__submenu--item {
+            font-size: 15px !important;
+        }
+    }
+
+    .icon-search {
+        font-size: 23px !important;
+    }
+
+    .logo {
+        width: 90px !important;
     }
 
     .div-breadcrumb {
@@ -57,11 +73,111 @@ $position: absolute;
 
     .menu__container {
         width: 63% !important;
+
+        .menu__submenu--content {
+            width: 106% !important;
+            padding-bottom: 10px !important;
+
+            .menu--category {
+                font-size: 11px !important;
+                line-height: 15px !important;
+                width: 152px !important;
+                margin-right: 60px !important;
+                padding-top: 20px !important;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
     }
 
-    // .carousel {
-    //     transform: translate3d(-250px, 0px, 0px);
-    // }
+    .menu--products {
+        margin-top: 0 !important;
+        font-size: 10px !important;
+    }
+
+    .menu__products--clothes {
+        height: 215px !important;
+    }
+
+    .menu__products--category {
+
+        width: 247px !important;
+
+        li {
+            font-size: 10px !important;
+        }
+    }
+
+    .classic,
+    .slim,
+    .summer,
+    .zero,
+    .surf,
+    .mini,
+    .socks {
+        height: 26px !important;
+        width: 102px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .carousel {
+        transform: translate3d(11px, 0px, 0px) !important;
+    }
+
+    .img,
+    .first__slider {
+        height: 40vh !important;
+    }
+
+    .first__slider {
+
+        .slider__content {
+            top: 17% !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+
+        h5 {
+            font-size: 10px !important;
+            margin-top: 15px !important;
+        }
+
+        button {
+            margin-top: 0px !important;
+            height: 35px !important;
+            width: 145px !important;
+            font-size: 10px !important;
+        }
+    }
+
+    .sec-slider--content {
+        p {
+            font-size: 15px !important;
+            top: 18% !important;
+        }
+
+        h5 {
+            margin-top: 17px !important;
+            font-size: 12px !important;
+        }
+
+        button {
+            margin-top: 41px !important;
+            height: 35px !important;
+            width: 145px !important;
+            font-size: 10px !important;
+        }
+    }
+
+    .slick-list .draggable {
+        height: 240px !important;
+    }
+
+    .slick-dots {
+        top: 217px !important;
+    }
 
     // .carousel-block {
     //     width: 98% !important;
@@ -107,15 +223,15 @@ $position: absolute;
         /* width: 100%; */
         height: 500px !important;
         justify-content: space-around;
-        position: relative;
+        // position: relative;
     }
 
     .product__list {
         margin-top: -7% !important;
         width: 24% !important;
         position: absolute !important;
-        top: 36% !important;
-        left: 1% !important;
+        top: 25% !important;
+        left: 3% !important;
         width: 30% !important;
     }
 
@@ -124,21 +240,48 @@ $position: absolute;
         text-align: left !important;
 
         a {
-            font-size: 30px !important;
+            font-size: 20px !important;
         }
     }
 
     .product__nav {
         width: 100% !important;
         height: 145px !important;
+        margin-right: 0px !important;
+        justify-content: space-between !important;
+        padding: 0 !important;
 
         a {
-            font-size: 14px !important;
+            font-size: 12px !important;
         }
     }
 
     .filter {
         padding-left: 17px !important;
+    }
+
+    .product__btn {
+        padding-left: 0 !important;
+
+        .filter__btn {
+            height: 35px !important;
+            width: 196px !important;
+            font-size: 12px !important;
+        }
+    }
+
+    .filter__modal {
+        width: 992px !important;
+        left: -15px !important;
+        top: -145px !important;
+    }
+
+    .product {
+        height: 69vh !important;
+    }
+
+    .search__modal {
+        width: 104% !important;
     }
 
     .resultPage {
@@ -156,18 +299,23 @@ $position: absolute;
         margin-left: 18px !important;
     }
 
+    .main__results {
+        margin-bottom: 20px !important;
+    }
+
     .card--img {
         img {
-            width: 50%;
+            width: 60%;
         }
     }
 
     .btn--card {
         width: 82% !important;
+        font-size: 12px !important;
     }
 
     .items {
-        width: 97% !important;
+        margin-left: 50px !important;
     }
 
     .items--card {
@@ -175,13 +323,40 @@ $position: absolute;
         height: 270px !important;
     }
 
+    .card--btn {
+        top: 220px !important;
+        width: 100% !important;
+    }
+
     .main__pagination {
         width: 111% !important;
+
+        ul {
+            width: 359px !important;
+
+
+            li {
+                height: 20px !important;
+                width: 25px !important;
+            }
+        }
+
+        a {
+            font-size: 13px !important;
+            vertical-align: baseline !important;
+        }
     }
 
     .footer--block {
-        width: 88% !important;
-        margin-left: 1% !important;
+        width: 100% !important;
+    }
+
+    .footer__content {
+        width: 99% !important;
+    }
+
+    .promo {
+        font-size: 15px !important;
     }
 
     .newsletter__block {
@@ -189,12 +364,29 @@ $position: absolute;
     }
 
     .newsletter__form {
-        width: 355px !important;
+        width: 287px !important;
+    }
+
+    .footer__btn {
+        height: 38px !important;
+        font-size: 13px !important;
     }
 
     .footer__nav {
         width: 80% !important;
-        padding-left: 20% !important;
+        padding-left: 0 !important;
+
+        h5 {
+            font-size: 14px !important;
+        }
+
+        a {
+            font-size: 10px !important;
+        }
+    }
+
+    .footer__text {
+        font-size: 10px !important;
     }
 }
 
@@ -679,95 +871,122 @@ ul {
         width: 25px;
         border-radius: 69px;
         -webkit-appearance: none;
+        padding-left: 3px;
+        padding-bottom: 26px;
+    }
+
+    input[type="checkbox"]:checked:before {
+        content: '\2713';
+        text-align: center;
+        color: black;
+        font-size: 19px;
+        font-weight: bolder;
+        vertical-align: super;
     }
 }
-
 
 
 .filter__colors--one {
     background: #F36;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--two {
     background: #33E1FF;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--three {
     background: #39F;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--four {
     background: #2AC940;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--five {
     background: #FA9917;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--six {
     background: #FF5F58;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--seven {
     background: #FFF;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--eight {
     background: #F2F2F2;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--nine {
     background: #BDBDBD;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--ten {
     background: #4F4F4F;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--eleven {
     background: #000;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--twelve {
     background: #1C029B;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--thirteen {
     background: #F36;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--fourteen {
     background-color: #FB00CB;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--fifteen {
     background: #F467EA;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__colors--sexteen {
     background: #F36;
     cursor: pointer;
+    outline: none;
 }
 
 .filter__size {
     padding-left: 50px;
     padding-top: 50px;
     width: 73%;
+    display: block;
 
     h4 {
         color: #111;
@@ -845,12 +1064,14 @@ ul {
 .icon-down-arow {
     margin-top: 45px;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .icon-up-arow {
     transform: rotate(180deg);
     font-size: 25px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .filter__materials,
@@ -1248,6 +1469,11 @@ ul {
         justify-content: $between;
         width: 359px;
 
+        .left__arrow,
+        .right__arrow {
+            font-size: 30px !important;
+        }
+
         li {
             height: 27px;
             width: 30px;
@@ -1271,7 +1497,21 @@ ul {
             font-size: 20px;
             align-self: center;
         }
+
+        // .icon-righ-arow,
+        // .pagination {
+        //     left: 56%;
+        //     top: 1105px;
+        //     color: black;
+        //     cursor: pointer;
+        // }
+
+        // .icon-righ-arow,
+        // .pagination::before {
+        //     content: none;
+        // }
     }
+
 }
 
 
@@ -1707,14 +1947,15 @@ ul {
     justify-content: space-between;
     width: 91%;
 
-    span {
+    .form__products {
         height: 17px;
-        width: 239px;
         color: #111;
         font-family: Montserrat;
         font-size: 14px;
         line-height: 17px;
         margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
     }
 
     h6 {
@@ -1724,6 +1965,14 @@ ul {
         font-weight: 700;
         line-height: 17px;
         margin-bottom: 10px;
+    }
+
+    .product__found {
+        margin-top: 15px;
+    }
+
+    .search__result {
+        border: none;
     }
 
     .suggestion__btn {
@@ -1740,7 +1989,14 @@ ul {
         outline: none;
         margin-top: 20px;
         margin-bottom: 20px;
+        cursor: pointer;
     }
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    width: 27%;
 }
 
 
@@ -1752,6 +2008,10 @@ ul {
 
     span {
         margin-top: 10px;
+        color: #111;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 

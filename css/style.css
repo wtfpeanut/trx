@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?bipzet');
-  src:  url('fonts/icomoon.eot?bipzet#iefix') format('embedded-opentype'),
+  src: url('fonts/icomoon.eot?bipzet');
+  src: url('fonts/icomoon.eot?bipzet#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?bipzet') format('truetype'),
     url('fonts/icomoon.woff?bipzet') format('woff'),
     url('fonts/icomoon.svg?bipzet#icomoon') format('svg');
@@ -28,39 +28,59 @@ i {
 .icon-check:before {
   content: "\e900";
 }
+
 .icon-close:before {
   content: "\e901";
 }
+
 .icon-control:before {
   content: "\e902";
 }
+
 .icon-down-arow:before {
   content: "\e903";
 }
+
 .icon-facebook:before {
   content: "\e904";
 }
+
 .icon-left-arow:before {
   content: "\e905";
 }
+
+.icon-lef-arow:before {
+  content: "\e905";
+}
+
 .icon-placeholder:before {
   content: "\e906";
 }
+
 .icon-righ-arow:before {
   content: "\e907";
 }
+
+.icon-right-arow:before {
+  content: "\e907";
+}
+
 .icon-search:before {
   content: "\e908";
 }
+
 .icon-shopping-bag:before {
   content: "\e909";
 }
+
 .icon-twitter:before {
   content: "\e90a";
 }
+
 .icon-up-arow:before {
   content: "\e90b";
 }
+
 .icon-user:before {
   content: "\e90c";
 }
