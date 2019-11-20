@@ -1,0 +1,319 @@
+/* ===================== Responsividade ===================== */
+
+@media(min-width:1024px) and (max-width: 1919px) {
+
+    html {
+        width: 95% !important;
+    }
+
+    .containerr {
+        width: 100% !important;
+    }
+
+    .header-block {
+        width: 95% !important;
+    }
+
+    .header__menu {
+        width: 100% !important;
+        justify-content: s$between !important;
+        padding-left: 18px !important;
+
+        .icons {
+            padding-right: 20px;
+        }
+
+        .menu__submenu--item {
+            font-size: 15px !important;
+        }
+    }
+
+    .icon-search {
+        font-size: 23px !important;
+    }
+
+    .logo {
+        width: 90px !important;
+    }
+
+    .div-breadcrumb {
+        top: 13% !important;
+    }
+
+    .menu__container {
+        width: 63% !important;
+
+        .menu__submenu--content {
+            width: 106% !important;
+            padding-bottom: 10px !important;
+
+            .menu--category {
+                font-size: 11px !important;
+                line-height: 15px !important;
+                width: 152px !important;
+                margin-right: 60px !important;
+                padding-top: 20px !important;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .menu--products {
+        margin-top: 0 !important;
+        font-size: 10px !important;
+    }
+
+    .menu__products--clothes {
+        height: 215px !important;
+    }
+
+    .menu__products--category {
+
+        width: 247px !important;
+
+        li {
+            font-size: 10px !important;
+        }
+    }
+
+    .classic,
+    .slim,
+    .summer,
+    .zero,
+    .surf,
+    .mini,
+    .socks {
+        height: 26px !important;
+        width: 102px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .carousel {
+        transform: translate3d(11px, 0px, 0px) !important;
+    }
+
+    .img,
+    .first__slider {
+        height: 40vh !important;
+    }
+
+    .first__slider {
+
+        .slider__content {
+            top: 17% !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+
+        h5 {
+            font-size: 10px !important;
+            margin-top: 15px !important;
+        }
+
+        button {
+            margin-top: 0px !important;
+            height: 35px !important;
+            width: 145px !important;
+            font-size: 10px !important;
+        }
+    }
+
+    .sec-slider--content {
+        p {
+            font-size: 15px !important;
+            top: 18% !important;
+        }
+
+        h5 {
+            margin-top: 17px !important;
+            font-size: 12px !important;
+        }
+
+        button {
+            margin-top: 41px !important;
+            height: 35px !important;
+            width: 145px !important;
+            font-size: 10px !important;
+        }
+    }
+
+    .slick-list .draggable {
+        height: 240px !important;
+    }
+
+    .slick-dots {
+        top: 217px !important;
+    }
+
+    .product__container {
+        display: $flex;
+        height: 500px !important;
+        justify-content: $around;
+    }
+
+    .product__list {
+        margin-top: -7% !important;
+        width: 24% !important;
+        position: $position;
+        top: 25% !important;
+        left: 3% !important;
+        width: 30% !important;
+    }
+
+    .div__product {
+        width: 100% !important;
+        text-align: left !important;
+
+        a {
+            font-size: 20px !important;
+        }
+    }
+
+    .product__nav {
+        width: 100% !important;
+        height: 145px !important;
+        margin-right: 0px !important;
+        justify-content: $between !important;
+        padding: 0 !important;
+
+        a {
+            font-size: 12px !important;
+        }
+    }
+
+    .filter {
+        padding-left: 17px !important;
+    }
+
+    .product__btn {
+        padding-left: 0 !important;
+
+        .filter__btn {
+            height: 35px !important;
+            width: 196px !important;
+            font-size: 12px !important;
+        }
+    }
+
+    .filter__modal {
+        width: 992px !important;
+        left: -15px !important;
+        top: -145px !important;
+    }
+
+    .product {
+        height: 69vh !important;
+    }
+
+    .search__modal {
+        width: 104% !important;
+    }
+
+    .resultPage {
+        width: 21%;
+        position: $position;
+        display: $flex;
+        justify-content: center;
+        top: 11% !important;
+        right: 75% !important;
+    }
+
+    .main-block {
+        width: 92% !important;
+        margin-top: 25px !important;
+        margin-left: 18px !important;
+    }
+
+    .main__results {
+        margin-bottom: 20px !important;
+    }
+
+    .card--img {
+        img {
+            width: 60%;
+        }
+    }
+
+    .btn--card {
+        width: 82% !important;
+        font-size: 12px !important;
+    }
+
+    .items {
+        margin-left: 50px !important;
+    }
+
+    .items--card {
+        width: 20% !important;
+        height: 270px !important;
+    }
+
+    .card--btn {
+        top: 220px !important;
+        width: 100% !important;
+    }
+
+    .main__pagination {
+        width: 111% !important;
+
+        ul {
+            width: 359px !important;
+
+
+            li {
+                height: 20px !important;
+                width: 25px !important;
+            }
+        }
+
+        a {
+            font-size: 13px !important;
+            vertical-align: baseline !important;
+        }
+    }
+
+    .footer-block {
+        width: 100% !important;
+    }
+
+    .footer__content {
+        width: 99% !important;
+    }
+
+    .promo {
+        font-size: 15px !important;
+    }
+
+    .newsletter__block {
+        width: 30% !important;
+    }
+
+    .newsletter__form {
+        width: 287px !important;
+    }
+
+    .footer__btn {
+        height: 38px !important;
+        font-size: 13px !important;
+    }
+
+    .footer__nav {
+        width: 80% !important;
+        padding-left: 0 !important;
+
+        h5 {
+            font-size: 14px !important;
+        }
+
+        a {
+            font-size: 10px !important;
+        }
+    }
+
+    .footer__text {
+        font-size: 10px !important;
+    }
+}

@@ -1,0 +1,151 @@
+/* ===================== Inicio do Footer ===================== */
+
+.footer-block {
+    display: flex;
+    margin-top: 5%;
+    height: 410px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footer__container {
+    @include flex;
+    width: 100%;
+}
+
+.promo {
+    color: $font-color-standart;
+    font-family: $font-standart;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+.newsletter__block {
+    width: 38%;
+    padding-left: 90px;
+    padding-top: 41px;
+}
+
+.newsletter__form {
+    height: 45px;
+    width: 510px;
+    border-radius: 30px;
+    background-color: $white;
+    display: $flex;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.email {
+    height: 45px;
+    width: 510px;
+    border-radius: 30px;
+    background-color: $white;
+    border: none;
+    color: $grey;
+    font-family: $font-standart;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footer__btn {
+    height: 45px;
+    width: 155px;
+    border-radius: 30px;
+    background-color: $thanos;
+    border: 1px solid $thanos;
+    color: $dark-ish-white;
+    font-family: $font-standart;
+    font-size: $font-size;
+    outline: none;
+    line-height: $line-height;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-instagram,
+.icon-youtube,
+.icon-linkedin {
+    color: $thanos;
+}
+
+.btn:hover {
+    background-color: $white;
+}
+
+.footer__socialmedia {
+    height: 26px;
+    width: 189px;
+    display: $flex;
+    justify-content: $between;
+    color: $thanos;
+    font-size: 25px;
+}
+
+.footer__content {
+    width: 100%;
+    display: $flex;
+    justify-content: $around;
+    background: $grey-ish;
+    padding-top: 41px;
+}
+
+.footer__nav {
+    display: $flex;
+    justify-content: $between;
+    width: 65%;
+
+    h5 {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: $font-size;
+        font-weight: 700;
+    }
+
+    a {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 12px;
+    }
+}
+
+.footer__help {
+    @include flex;
+    height: 250px;
+    width: 192px;
+}
+
+.footer__shippment {
+    height: 280px;
+    width: 315px;
+    @include flex;
+
+    .shippment-options {
+        height: 112px;
+        width: 192px;
+        @include flex;
+    }
+}
+
+.footer__payment {
+    height: 113px;
+    display: $flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.footer__text {
+    font-family: $font-standart;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 17px;
+    text-align: center;
+    background: $grey-ish;
+    height: 78px;
+    margin-top: 2px;
+    width: 100%;
+    padding-top: 57px;
+}

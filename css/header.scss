@@ -1,0 +1,116 @@
+/* ===================== Início do css ===================== */
+
+body {
+    font-family: $font-standart;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+
+/* ===================== Início do header ===================== */
+
+.header-block {
+    position: fixed;
+    width: 95%;
+    background-color: $white;
+    z-index: 1;
+    display: $flex;
+    justify-content: $around;
+}
+
+.menu__container {
+    display: $flex;
+    justify-content: $between;
+    width: 40%;
+}
+
+.header__menu {
+    display: $flex;
+    justify-content: $between;
+    margin-bottom: 25px;
+    width: 91%;
+
+    .menu__submenu--item {
+        margin-top: 20px;
+        font-family: $font-standart;
+        color: $font-color-standart;
+        font-size: 20px;
+        letter-spacing: $letter-spacing;
+        line-height: $line-height;
+        width: 185%;
+        transition: 200ms linear;
+    }
+
+    a {
+        color: $font-color-standart
+    }
+}
+
+.menu__img,
+.search__btn {
+    z-index: 1;
+}
+
+
+.search__btn,
+.location__btn,
+.account__btn,
+.icon__btn {
+    border: none;
+    background-color: $white;
+    @include button;
+    cursor: pointer;
+}
+
+.icon__btn {
+    padding-bottom: 13px;
+}
+
+.account__btn {
+    padding-right: 30px;
+}
+
+.icons {
+    width: 10%;
+    display: $flex;
+    justify-content: $around;
+}
+
+.search__btn,
+.icons {
+    padding-top: 16px;
+}
+
+.logo {
+    width: 112px;
+    padding-top: 14px;
+}
+
+.icon-search {
+    font-size: 28px;
+}
+
+.icon-user,
+.icon-placeholder,
+.icon-shopping-bag {
+    font-size: 20px;
+}
+
+.icon-control {
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+.icon__line {
+    height: 20px;
+    border: 1px solid;
+    margin: 0 10px;
+}

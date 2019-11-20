@@ -1,0 +1,29 @@
+/* ===================== Início do breadcrumb =====================  */
+
+.resultPage {
+    width: 22%;
+    position: $position;
+    display: $flex;
+    justify-content: center;
+    top: 9%;
+}
+
+.breadcrumb {
+    display: $flex;
+    font-size: 12px;
+
+    a {
+        color: $grey;
+    }
+}
+
+.breadcrumb__line,
+.breadcrumb__item {
+    padding-right: 3px;
+    font-family: $font-standart;
+    font-size: 14px;
+}
+
+.breadcrumb__item :not(#polos) {
+    text-decoration: underline;
+}

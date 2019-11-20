@@ -1,0 +1,84 @@
+/* ================= Sacola ================= */
+.bag__container {
+    width: 111%;
+    height: 100vh;
+    display: none;
+    justify-content: $between;
+    position: $position;
+    top: 60px;
+    padding-left: 98px;
+    background: white;
+
+    .bag__modal {
+        width: 49%;
+        height: 100vh;
+        position: $position;
+        margin-left: 58px;
+        background-color: rgba(17, 17, 17, 0.15);
+    }
+
+    h3 {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 50px;
+        line-height: 61px;
+        display: none;
+    }
+
+    .buy__btn {
+        height: 35px;
+        width: 217.58px;
+        border-radius: 30px;
+        background-color: $thanos;
+        position: $position;
+        color: #EEE;
+        font-family: $font-standart;
+        font-size: $font-size;
+        line-height: $line-height;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.bag__products {
+    width: 35%;
+    background: $white;
+    position: $position;
+    left: 55%;
+    height: 100vh;
+
+    h4,
+    span {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 50px;
+    }
+}
+
+.bag__total {
+    display: $flex;
+    justify-content: $between;
+    width: 65%;
+    position: $position;
+    top: 42%;
+    right: 25%;
+}
+
+.finish__btn {
+    position: $position;
+    top: 47%;
+    right: 90%;
+}
+
+/* ================= Hover sacola ================= */
+
+.icon__hover {
+    display: none;
+    width: 100vh;
+    height: 100vh;
+
+}

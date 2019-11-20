@@ -1,0 +1,134 @@
+/* ================= Busca ================= */
+
+.search__modal {
+    position: $position;
+    top: 53%;
+    width: 94%;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, .3);
+    display: none;
+    flex-direction: column;
+    z-index: -9999;
+}
+
+.product {
+    height: 92vh;
+    background: $white;
+}
+
+.search__form {
+    display: $flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 57px;
+
+    input {
+        height: 73px;
+        width: 55%;
+        color: $dark-ish-white;
+        font-family: $font-standart;
+        font-size: 60px;
+        line-height: 73px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid$thanos;
+        width: 74%;
+        color: $black;
+    }
+}
+
+.close__btn {
+    background-color: $white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    text-align-last: end;
+    padding-top: 30px;
+    font-size: 25px;
+    width: 37px;
+    align-self: flex-end;
+
+}
+
+.search__results {
+
+    @include flex;
+    width: 91%;
+
+    .form__products {
+        height: 17px;
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 10px;
+        display: $flex;
+        justify-content: $between;
+    }
+
+    h6 {
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 10px;
+    }
+
+    .product__found {
+        margin-top: 15px;
+    }
+
+    .search__result {
+        border: none;
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 14px;
+    }
+
+    .suggestion__btn {
+        box-sizing: border-box;
+        height: 35px;
+        width: 162px;
+        border-radius: 30px;
+        background-color: $white;
+        border: 1px solid $thanos;
+        color: $thanos;
+        font-family: $font-standart;
+        font-size: 14px;
+        line-height: 17px;
+        outline: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+}
+
+.search {
+    display: $flex;
+    justify-content: $between;
+    width: 27%;
+}
+
+
+.search__suggestion {
+    @include flex;
+    height: 50%;
+
+    span {
+        margin-top: 10px;
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.card__results {
+    display: $flex;
+    justify-content: $between;
+    margin-top: 25px;
+    width: 97%;
+
+}

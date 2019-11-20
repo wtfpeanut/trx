@@ -1,0 +1,187 @@
+/* ===================== Submenu do hover ===================== */
+
+.menu__submenu {
+    overflow: hidden;
+    transition: 200ms linear;
+    cursor: pointer;
+    position: $position;
+    top: 60%;
+    background: $white;
+
+    width: 106%;
+
+    justify-content: $around;
+    left: 0%;
+}
+
+.menu__submenu--content {
+    display: none;
+    transition: 200ms linear;
+    cursor: pointer;
+    position: $position;
+    background: $white;
+    width: 106%;
+    height: 45vh;
+    justify-content: $around;
+    left: 0%;
+
+    &:hover {
+        display: $flex;
+    }
+
+    .menu--category {
+        height: 17px;
+        color: $font-color-standart;
+        font-family: $font-standart;
+        font-size: 18px;
+        font-weight: bolder;
+        line-height: 17px;
+        width: 22%;
+        margin-top: 50px;
+        margin-left: 9%;
+        margin-right: 180px;
+    }
+
+    .menu--products {
+        color: $grey;
+        font-family: $font-standart;
+        font-size: 14px;
+        font-weight: initial;
+        letter-spacing: $letter-spacing;
+        line-height: $line-height;
+        margin-top: 20px;
+        width: 148px;
+    }
+}
+
+
+
+
+
+.menu__products--clothes {
+    @include flex;
+    height: 329px;
+    margin-top: 10px;
+    width: 155px;
+}
+
+.menu__products--sneakers {
+    @include flex;
+    height: 53px;
+    margin-top: 10px;
+}
+
+.menu__products--accessories {
+    @include flex;
+    height: 155px;
+    margin-top: 10px;
+}
+
+.menu__products--category {
+    height: 130px;
+    margin-top: 10px;
+    font-family: $font-standart;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    display: $flex;
+    flex-flow: wrap;
+    justify-content: end;
+    width: 345px;
+
+    li {
+        margin: 0 5px;
+    }
+}
+
+.classic,
+.slim,
+.summer,
+.zero {
+    box-sizing: border-box;
+    height: 35px;
+    width: 126px;
+    border-radius: 30px;
+    background-color: $white;
+    border: 1px solid $grey;
+    padding-top: 7px;
+}
+
+.socks {
+    box-sizing: border-box;
+    height: 35px;
+    width: 58px;
+    border-radius: 30px;
+    background-color: $white;
+    border: 1px solid $grey;
+    padding-top: 7px;
+}
+
+.surf {
+    box-sizing: border-box;
+    height: 35px;
+    width: 113px;
+    border-radius: 30px;
+    background-color: $white;
+    border: 1px solid $grey;
+    padding-top: 7px;
+}
+
+.mini {
+    box-sizing: border-box;
+    height: 35px;
+    width: 74px;
+    border-radius: 30px;
+    background-color: $white;
+    border: 1px solid $grey;
+    padding-top: 7px;
+}
+
+.menu__submenu--item:hover {
+    .menu__submenu--content {
+        display: $flex;
+    }
+}
+
+.menu__submenu {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.menu__submenu--item:hover {
+    .menu__submenu {
+        display: inline-flex;
+
+        &:hover {
+            display: none;
+        }
+    }
+
+}
+
+
+.menu__submenu--item>a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px $thanos;
+    transform: scaleY(0);
+    width: 55%;
+}
+
+.menu__submenu--item {
+    a:hover:after {
+        transform: scaleY(4);
+    }
+
+    a.fromBottom:after {
+        transform-origin: 0 0 0 100%;
+    }
+
+}
+
+.product__container {
+    display: $flex;
+    width: 100%;
+    height: 512px;
+}

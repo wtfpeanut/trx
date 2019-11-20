@@ -1,0 +1,162 @@
+/* ===================== Início do main ===================== */
+
+.items {
+    display: $flex;
+    justify-content: $between;
+    width: 100%;
+}
+
+.main-block {
+    width: 87%;
+    margin-left: 85px;
+    margin-right: 86px;
+    margin-top: 35px;
+}
+
+.main__results {
+    color: $black;
+    font-family: $font-standart;
+    font-size: 12px;
+    letter-spacing: $letter-spacing;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+
+.items--card {
+    height: 500px;
+    width: 312px;
+
+    p {
+        color: $black;
+        font-family: $font-standart;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+
+    .old--price {
+        color: $grey;
+        font-family: $font-standart;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 15px;
+        text-decoration: line-through
+    }
+
+    .new--price {
+        color: $thanos;
+        font-family: $font-standart;
+        font-size: $font-size;
+        font-weight: 700;
+        line-height: $line-height;
+    }
+}
+
+.items--discount {
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+.card--img {
+    position: relative;
+    margin-bottom: 25px;
+
+    .card {
+        position: $position;
+        overflow: hidden;
+        transition: 200ms linear;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        opacity: 0;
+    }
+}
+
+.card--btn {
+    position: $position;
+    top: 408px;
+}
+
+.btn--card {
+    @include button;
+    background: $white;
+    padding-left: 0px;
+    margin-top: 15px;
+    position: $position;
+    overflow: hidden;
+    opacity: 0;
+    height: 35px;
+    width: 312px;
+    border-radius: 30px;
+    border: 1px solid $thanos;
+    color: $thanos;
+    font-family: $font-standart;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+.items--card:hover {
+    .btn--card {
+        opacity: 1;
+        cursor: pointer;
+        transition: 200ms linear;
+    }
+}
+
+.btn--card:hover,
+.filter__btn:hover,
+.slider--btn:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: 200ms linear;
+    background: $thanos;
+    color: $white;
+}
+
+.main__pagination {
+    height: 39px;
+    width: 94%;
+    display: $flex;
+    justify-content: center;
+    margin-top: 25px;
+    align-items: center;
+
+    ul {
+        display: $flex;
+        justify-content: $between;
+        width: 359px;
+
+        .left__arrow,
+        .right__arrow {
+            font-size: 30px !important;
+        }
+
+        li {
+            height: 27px;
+            width: 30px;
+            background-color: $thanos;
+            border-radius: 14px;
+            padding-top: 2px;
+            text-align: center;
+
+            a {
+                color: $dark-ish-white;
+                font-family: $font-standart;
+                font-size: 18px;
+                vertical-align: sub;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            color: $font-color-standart;
+            font-family: $font-standart;
+            font-size: 20px;
+            align-self: center;
+        }
+    }
+
+}
