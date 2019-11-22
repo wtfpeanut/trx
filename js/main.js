@@ -63,6 +63,7 @@ $(document).ready(function () {
         $("input").prop("checked", false);
     });
 
+
     // ============= Replica o que for digitado na pesquisa =============
 
     $(".form-control").bind("keyup paste", function () {
@@ -75,5 +76,28 @@ $(document).ready(function () {
         function () {
             $(this).val('');
         });
+
+    var acc = document.getElementsByClassName("filter__accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+            $(".icon-down-arow").toggleClass("icon-down-arow--active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "flex") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "flex";
+            }
+
+        });
+    }
+
 
 });

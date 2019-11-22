@@ -342,8 +342,6 @@ ul {
   height: 57px; }
   .search__form input {
     height: 73px;
-    width: 55%;
-    color: #eeeeee;
     font-family: "Montserrat", sans-serif;
     font-size: 60px;
     line-height: 73px;
@@ -351,7 +349,7 @@ ul {
     outline: none;
     border-bottom: 1px solid #58006d;
     width: 74%;
-    color: #111111; }
+    color: #767676; }
 
 .close__btn {
   background-color: #ffffff;
@@ -765,7 +763,7 @@ ul {
   align-items: flex-end;
   width: 100%;
   height: 1563px;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 7%;
   background-color: rgba(17, 17, 17, 0.15); }
@@ -781,10 +779,12 @@ ul {
   height: 100%;
   width: 45%;
   background-color: #ffffff;
-  position: absolute;
+  position: fixed;
   right: 55%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow-y: scroll;
+  top: 7%; }
 
 .product__btn {
   padding-left: 83px; }
@@ -844,13 +844,15 @@ ul {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 700;
-    line-height: 17px; }
+    line-height: 17px;
+    padding-bottom: 10px; }
   .filter__select span {
     color: #111;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     line-height: 17px;
-    width: 54%; }
+    width: 54%;
+    padding-bottom: 10px; }
   .filter__select input {
     box-sizing: border-box;
     height: 20px;
@@ -891,7 +893,9 @@ ul {
     vertical-align: bottom; }
 
 .filter__colors {
-  padding-left: 50px; }
+  padding-left: 50px;
+  padding-top: 10px;
+  height: 117px; }
   .filter__colors h6 {
     color: #111;
     font-family: "Montserrat", sans-serif;
@@ -1008,9 +1012,10 @@ ul {
     font-weight: 700;
     line-height: 17px;
     padding-bottom: 20px; }
-  .filter__size div {
+  .filter__size .filter__accordion {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
   .filter__size span {
     color: #111;
     font-family: "Montserrat", sans-serif;
@@ -1025,19 +1030,79 @@ ul {
     border: 1px solid #767676;
     cursor: pointer; }
 
+.size__content,
+.material__content,
+.colection__content {
+  display: none;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 230px;
+  width: 100%; }
+
 .size__pp {
-  margin-top: 15px; }
+  margin-top: 15px;
+  display: flex; }
   .size__pp span {
     width: 96%;
+    padding-bottom: 20px;
+    padding-right: 12px; }
+
+.size___p {
+  display: flex; }
+  .size___p span {
+    width: 96%;
+    padding-bottom: 20px;
+    padding-right: 22px; }
+
+.size__m {
+  display: flex;
+  justify-content: space-between; }
+  .size__m span {
+    padding-bottom: 20px;
+    padding-right: 19px; }
+
+.size__g {
+  display: flex;
+  justify-content: space-between; }
+  .size__g span {
+    padding-right: 21px;
     padding-bottom: 20px; }
 
-.size___p span {
-  width: 96%;
-  padding-bottom: 20px; }
+.size__gg {
+  display: flex;
+  justify-content: space-between; }
+  .size__gg span {
+    padding-right: 10px; }
 
-.size__m span,
-.size__g span {
-  padding-bottom: 20px; }
+.material__content,
+.colection__content {
+  padding-top: 35px; }
+
+.material__content--one,
+.material__content--two,
+.material__content--three,
+.material__content--four,
+.material__content--five,
+.colection__content--one,
+.colection__content--two,
+.colection__content--three,
+.colection__content--four,
+.colection__content--five {
+  display: flex; }
+  .material__content--one span,
+  .material__content--two span,
+  .material__content--three span,
+  .material__content--four span,
+  .material__content--five span,
+  .colection__content--one span,
+  .colection__content--two span,
+  .colection__content--three span,
+  .colection__content--four span,
+  .colection__content--five span {
+    width: 96%;
+    /* padding-bottom: 20px; */
+    padding-right: 12px; }
 
 .size,
 .material,
@@ -1049,15 +1114,17 @@ ul {
   padding-right: 5px; }
 
 .icon-down-arow {
-  margin-top: 45px;
+  margin-top: auto;
   font-size: 25px;
   cursor: pointer; }
 
 .icon-up-arow {
-  transform: rotate(180deg);
   font-size: 25px;
   margin-bottom: 10px;
   cursor: pointer; }
+
+.icon-down-arow--active {
+  transform: rotate(180deg); }
 
 .filter__materials,
 .filter__colection {
@@ -1165,7 +1232,7 @@ ul {
   padding-top: 41px; }
 
 .newsletter__form {
-  height: 45px;
+  height: 47px;
   width: 510px;
   border-radius: 30px;
   background-color: #ffffff;
@@ -1182,7 +1249,8 @@ ul {
   color: #767676;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-style: italic; }
+  font-style: italic;
+  padding-left: 10px; }
 
 .footer__btn {
   height: 45px;
