@@ -61,6 +61,7 @@ $(document).ready(function () {
 
     $(".filter__clean").click(function () {
         $("input").prop("checked", false);
+        $('.size__value').html(" ");
     });
 
 
@@ -77,27 +78,31 @@ $(document).ready(function () {
             $(this).val('');
         });
 
-    var acc = document.getElementsByClassName("filter__accordion");
-    var i;
+    //  ============= Setas do accordion  =============
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
+    $(".filter__content").on("click", function (e) {
+        e.preventDefault(),
+            e.stopPropagation(),
+            $(this).children(".filter__sizes").children(".icon-down-arow").toggleClass('icon-down-arow--active'),
+            $(this).siblings(".filter__contents").toggleClass("filter__contents--active")
+    });
 
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-            $(".icon-down-arow").toggleClass("icon-down-arow--active");
 
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "flex") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "flex";
-            }
+    //  ============= Mostra o número de checkbox selecionados no tamanho  =============
 
+    $(document).ready(function () {
+
+        $(".contents").click(function () {
+            var numberOfChecked = $('.input__size:checked').length;
+
+            $('.size__value').text(numberOfChecked);
+            $('.input__size:checked').change(function () {
+
+                var numberOfChecked = $('.input__size:checked').length;
+                $('.size__value').text(numberOfChecked);
+            });
         });
-    }
+    });
 
 
 });

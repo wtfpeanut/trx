@@ -230,21 +230,34 @@
     input {
         box-sizing: border-box;
         height: 25px;
-        width: 25px;
+        width: 27px;
         border-radius: 69px;
         -webkit-appearance: none;
         padding-left: 3px;
         padding-bottom: 26px;
     }
 
-    input[type="checkbox"]:checked:before {
-        content: '\2713';
-        text-align: center;
-        color: black;
-        font-size: 19px;
-        font-weight: bolder;
-        vertical-align: super;
+    input[type="checkbox"]:checked {
+        background-image: url(../assets/img/icon-checkk.png);
+        background-repeat: no-repeat;
+        background-position: center;
     }
+
+    input[type="checkbox"]:checked.black {
+        background-image: url(../assets/img/icon-check.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        cursor: pointer;
+        outline: none;
+
+    }
+
 }
 
 
@@ -273,76 +286,79 @@
 }
 
 .filter__colors--five {
-    background: #FA9917;
+    background: #F3CA3E;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--six {
-    background: #FF5F58;
+    background: #FA9917;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--seven {
-    background: $white;
+    background: #FF5F58;
     cursor: pointer;
     outline: none;
+    border: 1px solid #767676;
 }
 
 .filter__colors--eight {
-    background: #F2F2F2;
+    background-color: #FFF;
+    border: 1px solid #BDBDBD;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--nine {
-    background: #BDBDBD;
+    background: #F2F2F2;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--ten {
-    background: #4F4F4F;
+    background: #BDBDBD;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--eleven {
-    background: #000;
+    background: #4F4F4F;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--twelve {
-    background: #1C029B;
+    background: #000;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--thirteen {
-    background: #F36;
+    background: #1C029B;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--fourteen {
-    background-color: #FB00CB;
+    background-color: #0059D0;
     cursor: pointer;
     outline: none;
 }
 
 .filter__colors--fifteen {
+    background: #FB00CB;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter__colors--sixteen {
     background: #F467EA;
     cursor: pointer;
     outline: none;
 }
 
-.filter__colors--sexteen {
-    background: #F36;
-    cursor: pointer;
-    outline: none;
-}
 
 .filter__size {
     padding-left: 50px;
@@ -363,6 +379,8 @@
         display: $flex;
         justify-content: $between;
         cursor: pointer;
+        flex-direction: column;
+
     }
 
     span {
@@ -383,15 +401,30 @@
     }
 }
 
-.size__content,
-.material__content,
-.colection__content {
-    display: none;
+.filter__sizes,
+.filter__materials,
+.filter__colection {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+.filter__content {
+    display: flex;
     overflow: hidden;
     justify-content: space-between;
     flex-direction: column;
-    height: 230px;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.filter__contents {
+    display: none;
+}
+
+.filter__contents--active {
+    display: block;
 }
 
 .size__pp {
@@ -460,6 +493,7 @@
 .colection__content--four,
 .colection__content--five {
     display: flex;
+    padding-bottom: 8px;
 
     span {
         width: 96%;
@@ -501,5 +535,5 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 17px;
-    padding-top: 50px;
+    padding-top: 40px;
 }
