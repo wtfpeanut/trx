@@ -105,10 +105,18 @@
 
 .search {
     display: $flex;
-    justify-content: $between;
-    width: 27%;
+    width: 100%;
 }
 
+.result__products {
+    display: flex;
+    margin-right: 10px;
+}
+
+.products__replica {
+    display: flex;
+    margin-top: 11px;
+}
 
 .search__suggestion {
     @include flex;

@@ -159,7 +159,7 @@
     span {
         color: $font-color-standart;
         font-family: $font-standart;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 17px;
         width: 54%;
         padding-bottom: 10px;
@@ -167,8 +167,8 @@
 
     input {
         box-sizing: border-box;
-        height: 20px;
-        width: 20px;
+        height: 22px;
+        width: 22px;
         background-color: $white;
         border: 1px solid $font-color-standart;
     }
@@ -182,7 +182,13 @@
 
     input {
         cursor: pointer;
+
+        input:checked.sell {
+            background-image: url(../assets/img/Ellipse.png);
+        }
     }
+
+
 }
 
 .most__sell,

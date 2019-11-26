@@ -259,15 +259,19 @@
                             <i class="icon-close"></i>
                         </button>
                         <div class="search__form">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="input">
                         </div>
                         <div class="search">
-                            <span class="form__products">709 produtos encontrados para</span>
-                            <span class="product__found">"
-                                <input type="text" class="search__result" readonly=“true”>
-                                "
-                            </span>
+                            <div class="result__products">
+                                <span class="form__products">709 produtos encontrados para</span>
+                            </div>
+                            <div class="products__replica">
+                                <span>"</span>
+                                <span id="result" class="search__result" readonly=“true”></span>
+                                <span>"</span>
+                            </div>
                         </div>
+
                         <button class="suggestion__btn">Ver todos</button>
                         <div class="search__suggestion">
                             <h6>Sugestões</h6>
@@ -431,7 +435,7 @@
 
             <div class="filter__modal">
                 <div class="filters">
-                    <div class="filter__close">
+                    <div class="filter__close filter__clean">
                         <i class="icon-close"></i>
                     </div>
                     <div class="filter__options">
@@ -445,15 +449,15 @@
                         <h6>Classificar por</h6>
                         <div class="most__sell">
                             <span>Mais Vendido</span>
-                            <input type="radio" name="select" value="vendido"><br>
+                            <input class="sell" type="radio" name="select" value="vendido"><br>
                         </div>
                         <div class="highest__price">
                             <span>Maior Preço</span>
-                            <input type="radio" name="select" value="maior"><br>
+                            <input class="sell" type="radio" name="select" value="maior"><br>
                         </div>
                         <div class="lower__price">
                             <span>Menor Preço</span>
-                            <input type="radio" name="select" value="menor">
+                            <input class="sell" type="radio" name="select" value="menor">
                         </div>
                     </div>
                     <div class="filter__colors">
@@ -761,8 +765,7 @@
                 <div class="newsletter__block">
                     <h6 class="promo">Receba Novidade e Promoções</h6>
                     <form class="newsletter__form">
-                        <input class="email" type="text" onfocus="this.value=''" name="email"
-                            value="exemplo@exemplo.com">
+                        <input class="email" type="text" name="email" value="exemplo@exemplo.com">
                         <button class="footer__btn" id="subscribe">Cadastrar</button>
                     </form>
                     <div class="footer__socialmedia">

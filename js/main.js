@@ -57,6 +57,10 @@ $(document).ready(function () {
         });
     });
 
+    $('.filter__close').click(function () {
+        $(this).siblings('.filter__content').children(".icon-down-arow").toggleClass('icon-down-arow--active')
+    })
+
     // ============= Limpa os inputs do filtro =============
 
     $(".filter__clean").click(function () {
@@ -64,19 +68,24 @@ $(document).ready(function () {
         $('.size__value').html(" ");
     });
 
-
     // ============= Replica o que for digitado na pesquisa =============
 
-    $(".form-control").bind("keyup paste", function () {
-        $(".search__result").val($(this).val());
-    });
-
+    input.oninput = function () {
+        result.innerHTML = input.value;
+    };
     // ============= Reseta o campo de input quando o foco estiver no campo novamente =============
 
-    $('input:text').focus(
-        function () {
-            $(this).val('');
+    $('input:text').click(function () {
+        $(this).val(' ');
+        $('#result').html(' ');
+    });
+
+    $('.icon-close').on("click", function () {
+        $('.search__modal').fadeOut('slow', function () {
+            $('#result').html(' ');
+            $('.form-control').val(' ');
         });
+    });
 
     //  ============= Setas do accordion  =============
 
