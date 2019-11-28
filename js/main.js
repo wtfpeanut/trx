@@ -113,5 +113,34 @@ $(document).ready(function () {
         });
     });
 
+    $('.btn--card').click(function () {
+        var color = $(this).attr("data-color");
+        var size = $(this).attr("data-size");
+        var old = $(this).attr("data-old");
+        var newPrice = $(this).attr("data-newPrice");
+
+        console.log(color);
+        console.log(size);
+        console.log(old);
+        console.log(newPrice);
+
+    });
+
+    function showCart() {
+        let output = "";
+
+        array.forEach(item => {
+            output += `
+            <div class="result__items">
+                <img class="result__img" src="${item.dataimg}">
+                <p class="result__name" src="${item.name}"></p>
+                <p class="result__newPrice" src="${item.newPrice}"></p>
+                <p class="result__old" src="${item.old}"></p>
+                <p class="result__color" src="${item.color}"></p>
+                <p class="result__size" src="${item.size}"></p>
+            </div>`;
+        });
+        document.getElementsByClassName('bag__products').innerHTML = output;
+    }
 
 });
